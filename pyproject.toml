@@ -16,6 +16,7 @@ dependencies = [
     "python-decouple>=3.8",
     "redis>=7.1.0",
     "uvloop>=0.22.1",
+    "whitenoise>=6.11.0",
 ]
 
 [dependency-groups]

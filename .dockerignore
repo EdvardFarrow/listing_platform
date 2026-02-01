@@ -1,0 +1,29 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.py[cod]
+*.so
+
+# Environment & Configs
+.env
+.venv/
+venv/
+env/
+
+# Data & Media
+postgres_data/
+media/
+*.sqlite3
+
+# Docker
+docker-compose.yml
+Dockerfile
+.dockerignore
+Makefile
+
+# IDE
+.idea/
+.vscode/
