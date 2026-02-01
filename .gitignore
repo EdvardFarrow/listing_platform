@@ -1,0 +1,39 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual Environments ---
+venv/
+env/
+.venv/
+.env/
+
+# --- Environment Variables ---
+.env
+.env.local
+.env.*
+
+staticfiles/
+
+# --- Media ---
+media/
+media/*
+!media/.gitkeep
+
+# --- Celery ---
+celerybeat-schedule
+celerybeat.pid
+
+# --- Redis ---
+dump.rdb
+
+# --- IDE & Editors ---
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# --- Coverage / Testing ---
+.coverage
+htmlcov/
