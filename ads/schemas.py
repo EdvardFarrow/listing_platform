@@ -1,7 +1,7 @@
+from typing import Optional
+
 from ninja import ModelSchema, Schema
-from typing import List, Optional
-from datetime import datetime
-from pydantic import Field
+
 from .models import Ad, Category
 
 
@@ -9,7 +9,7 @@ from .models import Ad, Category
 class CategorySchema(ModelSchema):
     class Meta:
         model = Category
-        fields = ['id', 'name', 'slug', 'icon']
+        fields = ["id", "name", "slug", "icon"]
 
 
 # Схема для Автора объявления
@@ -24,10 +24,10 @@ class AdOut(ModelSchema):
     category: CategorySchema
     seller: UserSchema
     image_url: Optional[str] = None
-    
+
     class Meta:
         model = Ad
-        fields = ['id', 'title', 'price', 'currency', 'city', 'status', 'created_at']
+        fields = ["id", "title", "price", "currency", "city", "status", "created_at"]
 
 
 # Схема для создания Объявления (входные данные)
@@ -35,6 +35,6 @@ class AdCreate(Schema):
     title: str
     description: str
     price: float
-    currency: str = 'TJS'
+    currency: str = "TJS"
     city: str
     category_id: int

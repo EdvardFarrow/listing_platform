@@ -1,4 +1,4 @@
-.PHONY: help up up-build down restart clean logs logs-bot logs-web ps db redis test
+.PHONY: help up up-build down restart clean ps logs
 
 
 help: ## Показать список доступных команд
@@ -26,9 +26,3 @@ ps: ## Показать статус контейнеров
 
 logs: ## Смотреть логи всех сервисов
 	docker compose logs -f
-
-logs-bot: ## Смотреть логи только бота
-	docker compose logs -f bot
-
-logs-web: ## Смотреть логи только веб-интерфейса
-	docker compose logs -f web

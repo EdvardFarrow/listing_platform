@@ -3,7 +3,7 @@ name = "listing-platform"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.12"
 dependencies = [
     "celery>=5.6.2",
     "channels>=4.3.2",
@@ -17,3 +17,40 @@ dependencies = [
     "redis>=7.1.0",
     "uvloop>=0.22.1",
 ]
+
+[dependency-groups]
+dev = [
+    "django-stubs[compatible-mypy]>=5.2.9",
+    "mypy>=1.19.1",
+    "ruff>=0.14.14",
+]
+
+
+[tool.ruff]
+line-length = 120
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
+    "migrations",
+]
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+plugins = ["mypy_django_plugin.main"]
+python_version = "3.12"  
+strict_optional = true
+ignore_missing_imports = true
+
+[tool.django-stubs]
+django_settings_module = "core.settings"
+
+[[tool.mypy.overrides]]
+module = "ninja.*"
+ignore_missing_imports = true
