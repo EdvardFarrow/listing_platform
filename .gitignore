@@ -37,3 +37,6 @@ dump.rdb
 # --- Coverage / Testing ---
 .coverage
 htmlcov/
+
+# --- Docker ---
+postgres_data/
