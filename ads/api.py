@@ -1,12 +1,14 @@
 from typing import List, Optional
-
+from users.models import User
 from django.contrib.postgres.search import TrigramSimilarity
 from django.http import HttpRequest
 from ninja import Query, Router
-
+from core.event_bus import publish_event
 from .filters import AdFilter
 from .models import Ad
 from .schemas import AdCreate, AdOut
+from ninja_jwt.authentication import JWTAuth
+
 
 router = Router()
 
@@ -45,15 +47,28 @@ async def get_ad(request: HttpRequest, ad_id: int):
 
 
 # Создание
-# FIXME: Хардкод для MVP. В будущем заменить на JWT auth
-@router.post("/", response=AdOut)
+@router.post("/", response=AdOut, auth=JWTAuth())
 async def create_ad(request: HttpRequest, payload: AdCreate):
-    from users.models import User
+    user = request.user 
+    
+    ad = await Ad.objects.acreate(
+        seller=user,
+        **payload.dict()
+    )
+    
+    ad_with_relations = await Ad.objects.select_related('category', 'seller').aget(id=ad.id)
 
-    user = await User.objects.afirst()
-
-    if not user:
-        user = await User.objects.acreate(username="test_user")
-
-    ad = await Ad.objects.acreate(seller=user, **payload.dict())
-    return await Ad.objects.select_related("category", "seller").aget(id=ad.id)
+    await publish_event(
+        topic="ads_events",
+        data={
+            "event": "created",
+            "ad_id": ad_with_relations.id,
+            "title": ad_with_relations.title,
+            "description": ad_with_relations.description,
+            "price": float(ad_with_relations.price),
+            "city": ad_with_relations.city,
+            "seller_id": user.id
+        }
+    )
+    
+    return ad_with_relations

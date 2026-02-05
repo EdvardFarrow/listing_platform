@@ -1,3 +1,4 @@
+from datetime import timedelta
 from pathlib import Path
 
 from decouple import config
@@ -25,6 +26,8 @@ INSTALLED_APPS = [
     "users",
     "ads",
     "chat",
+    "ninja_extra",
+    "ninja_jwt",
 ]
 
 AUTH_USER_MODEL = "users.User"
@@ -115,3 +118,9 @@ CHANNEL_LAYERS = {
 CELERY_BROKER_URL = "redis://redis:6379/0"
 CELERY_RESULT_BACKEND = "redis://redis:6379/0"
 CELERY_TIMEZONE = "UTC"
+
+
+NINJA_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+}
