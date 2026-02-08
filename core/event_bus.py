@@ -1,6 +1,5 @@
 from faststream.kafka import KafkaBroker
 
-
 BROKER_URL = "redpanda:9092"
 
 broker = KafkaBroker(BROKER_URL)

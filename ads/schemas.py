@@ -1,36 +1,22 @@
-from typing import Optional
+from typing import Any, Dict
 
 from ninja import ModelSchema, Schema
 
 from .models import Ad, Category
 
 
-# Схема для Категории (вывод)
-class CategorySchema(ModelSchema):
+class CategoryOut(ModelSchema):
     class Meta:
         model = Category
         fields = ["id", "name", "slug", "icon"]
 
 
-# Схема для Автора объявления
-class UserSchema(Schema):
+class UserOut(Schema):
     id: int
     username: str
-    avatar: Optional[str] = None
 
 
-# Основная схема Объявления (чтение)
-class AdOut(ModelSchema):
-    category: CategorySchema
-    seller: UserSchema
-    image_url: Optional[str] = None
-
-    class Meta:
-        model = Ad
-        fields = ["id", "title", "price", "currency", "city", "status", "created_at"]
-
-
-# Схема для создания Объявления (входные данные)
+# WRITE
 class AdCreate(Schema):
     title: str
     description: str
@@ -38,3 +24,25 @@ class AdCreate(Schema):
     currency: str = "TJS"
     city: str
     category_id: int
+    attributes: Dict[str, Any] = {}
+
+
+# READ
+class AdOut(ModelSchema):
+    category: CategoryOut
+    seller: UserOut
+    attributes: Dict[str, Any] = {}
+
+    class Meta:
+        model = Ad
+        fields = [
+            "id",
+            "title",
+            "description",
+            "price",
+            "currency",
+            "city",
+            "status",
+            "created_at",
+            "attributes"
+        ]

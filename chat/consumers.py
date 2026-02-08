@@ -56,7 +56,3 @@ class ChatConsumer(AsyncWebsocketConsumer):
         return Message.objects.create(
             conversation=conversation, sender=sender, text=text
         )
-
-
-# TODO: В будущем переписать на Redis channel layers с шардированием,
-# если будет >10k активных юзеров. Для MVP текущей схемы достаточно

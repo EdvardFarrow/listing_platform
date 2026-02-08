@@ -1,74 +1,85 @@
 from typing import List, Optional
-from users.models import User
-from django.contrib.postgres.search import TrigramSimilarity
+
+from django.db import transaction
 from django.http import HttpRequest
-from ninja import Query, Router
-from core.event_bus import publish_event
-from .filters import AdFilter
-from .models import Ad
-from .schemas import AdCreate, AdOut
+from django.shortcuts import get_object_or_404
+from ninja import Router
 from ninja_jwt.authentication import JWTAuth
 
+from core.search import search_ads
+from core.services import schedule_event
+
+from .models import Ad, Category
+from .schemas import AdCreate, AdOut
 
 router = Router()
 
 
-# Список объявлений
+# List of ads
 @router.get("/", response=List[AdOut])
-async def list_ads(request: HttpRequest, filters: AdFilter = Query(...), q: Optional[str] = None): # noqa: B008
-    qs = Ad.objects.select_related("category", "seller").filter(status=Ad.Status.ACTIVE)
+async def list_ads(
+    request: HttpRequest,
+    q: Optional[str] = None,
+    offset: int = 0,
+    limit: int = 20
+):
+    found_ids = await search_ads(query=q, limit=limit, offset=offset)
 
-    qs = filters.filter(qs)
+    if not found_ids:
+        return []
 
-    if q:
-        qs = (
-            qs.annotate(
-                similarity=TrigramSimilarity("title", q)
-                + TrigramSimilarity("description", q)
-            )
-            .filter(similarity__gt=0.1)
-            .order_by("-similarity")
-        )
-    else:
-        qs = qs.order_by("-created_at")
+    ads_qs = Ad.objects.select_related("category", "seller").filter(id__in=found_ids)
 
-    results = []
-    async for ad in qs:
-        results.append(ad)
+    ads_list = []
+    async for ad in ads_qs:
+        ads_list.append(ad)
 
-    return results
+    ads_map = {ad.id: ad for ad in ads_list}
 
+    sorted_results = [ads_map[aid] for aid in found_ids if aid in ads_map]
 
-# Детали объявления
+    return sorted_results
+
+# Details of ads
 @router.get("/{ad_id}", response=AdOut)
 async def get_ad(request: HttpRequest, ad_id: int):
     ad = await Ad.objects.select_related("category", "seller").aget(id=ad_id)
     return ad
 
 
-# Создание
+# Create
 @router.post("/", response=AdOut, auth=JWTAuth())
-async def create_ad(request: HttpRequest, payload: AdCreate):
-    user = request.user 
-    
-    ad = await Ad.objects.acreate(
-        seller=user,
-        **payload.dict()
-    )
-    
-    ad_with_relations = await Ad.objects.select_related('category', 'seller').aget(id=ad.id)
+def create_ad(request: HttpRequest, payload: AdCreate):
+    with transaction.atomic():
+        category = get_object_or_404(Category, id=payload.category_id)
 
-    await publish_event(
-        topic="ads_events",
-        data={
-            "event": "created",
-            "ad_id": ad_with_relations.id,
-            "title": ad_with_relations.title,
-            "description": ad_with_relations.description,
-            "price": float(ad_with_relations.price),
-            "city": ad_with_relations.city,
-            "seller_id": user.id
-        }
-    )
-    
-    return ad_with_relations
+        ad = Ad.objects.create(
+            seller=request.user,
+            category=category,
+            title=payload.title,
+            description=payload.description,
+            price=payload.price,
+            currency=payload.currency,
+            city=payload.city,
+            attributes=payload.attributes,
+            status=Ad.Status.ACTIVE
+        )
+
+        schedule_event(
+            topic="ads_events",
+            data={
+                "event": "created",
+                "data": {
+                    "ad_id": ad.id,
+                    "title": ad.title,
+                    "description": ad.description,
+                    "price": float(ad.price),
+                    "city": ad.city,
+                    "attributes": ad.attributes
+                }
+            }
+        )
+
+        ad.refresh_from_db()
+
+    return ad

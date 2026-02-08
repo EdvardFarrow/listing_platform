@@ -17,6 +17,8 @@ services:
       - DB_HOST=db
       - DB_PORT=5432
       - POSTGRES_HOST=db
+      - BROKER_URL=redpanda:9092
+      - OPENSEARCH_URL=http://opensearch:9200
 
   worker:
     build: .
@@ -34,7 +36,7 @@ services:
       - POSTGRES_HOST=db
 
   db:
-    image: postgres:15-alpine
+    image: postgis/postgis:16-3.4
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
@@ -127,6 +129,27 @@ services:
         condition: service_started
     env_file:
       - .env
+    environment:
+      - BROKER_URL=redpanda:9092
+      - OPENSEARCH_URL=http://opensearch:9200
+
+  relay:
+    build: .
+    command: python manage.py run_outbox_relay
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    depends_on:
+      db:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - POSTGRES_HOST=db
+      - BROKER_URL=redpanda:9092
 
 volumes:
   postgres_data:
