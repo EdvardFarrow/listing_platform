@@ -10,7 +10,8 @@ from core.search import search_ads
 from core.services import schedule_event
 
 from .models import Ad, Category
-from .schemas import AdCreate, AdOut
+from .schemas import AdCreate, AdOut, CategoryOut, CategoryTree
+
 
 router = Router()
 
@@ -83,3 +84,30 @@ def create_ad(request: HttpRequest, payload: AdCreate):
         ad.refresh_from_db()
 
     return ad
+
+
+@router.get("/categories", response=List[CategoryTree])
+def list_categories(request):
+    tree_data = Category.dump_bulk()
+    
+    def flatten_category(node):
+        data = node.pop('data') 
+        node.update(data)
+        
+        if 'children' in node:
+            for child in node['children']:
+                flatten_category(child)
+        return node
+
+    return [flatten_category(node) for node in tree_data]
+
+
+@router.get("/categories/{category_id}/breadcrumbs", response=List[CategoryOut])
+def get_category_breadcrumbs(request, category_id: int):
+    category = get_object_or_404(Category, id=category_id)
+    
+    ancestors = list(category.get_ancestors())
+    
+    breadcrumbs = ancestors + [category]
+    
+    return breadcrumbs

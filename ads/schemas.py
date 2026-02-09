@@ -1,4 +1,4 @@
-from typing import Any, Dict
+from typing import Any, Dict, List
 
 from ninja import ModelSchema, Schema
 
@@ -46,3 +46,11 @@ class AdOut(ModelSchema):
             "created_at",
             "attributes"
         ]
+
+
+class CategoryTree(Schema):
+    id: int
+    name: str
+    slug: str
+    icon: str
+    children: List['CategoryTree'] = []

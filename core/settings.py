@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.postgres",
     "django.contrib.gis",
+    "treebeard",
     "ninja",
     "core",
     "users",
