@@ -1,6 +1,6 @@
 import logging
 import os
-from typing import Literal
+from typing import Dict, Literal, Optional
 
 from faststream import FastStream
 from faststream.kafka import KafkaBroker
@@ -22,6 +22,8 @@ class AdPayload(BaseModel):
     description: str
     price: float
     city: str
+    attributes: Dict = {}
+    location: Optional[Dict[str, float]] = None
 
 
 class AdEvent(BaseModel):
@@ -51,7 +53,9 @@ async def setup_index():
                         "description": {"type": "text"},
                         "price": {"type": "float"},
                         "city": {"type": "keyword"},
-                        "ad_id": {"type": "long"}
+                        "ad_id": {"type": "long"},
+                        "location": {"type": "geo_point"}, 
+                        "attributes": {"type": "object"}
                     }
                 }
             })

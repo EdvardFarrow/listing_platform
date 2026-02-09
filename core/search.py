@@ -10,22 +10,69 @@ client = AsyncOpenSearch(
     verify_certs=False
 )
 
-async def search_ads(query: str = None, limit: int = 20, offset: int = 0):
+async def search_ads(
+    query: str = None, 
+    lat: float = None, 
+    lon: float = None,
+    radius_km: int = 10,
+    limit: int = 20, 
+    offset: int = 0,
+):
     """
     Searches for ads in OpenSearch.
     Returns a list of IDs of found ads.
     """
 
-    search_query = {"match_all": {}}
+    search_query = {
+        "bool": {
+            "must": [],
+            "filter": []
+        }
+    }
 
     if query:
-        search_query = {
+        search_query["bool"]["must"].append({
             "multi_match": {
                 "query": query,
                 "fields": ["title^3", "description"],
                 "fuzziness": "AUTO"
             }
+        })
+    else:
+        if not lat: 
+            search_query = {"match_all": {}}
+    
+    if lat is not None and lon is not None:
+        search_query = {
+            "bool": {
+                "must": search_query.get("bool", {}).get("must", []),
+                "filter": []
+            }
         }
+        
+        search_query["bool"]["filter"].append({
+            "geo_distance": {
+                "distance": f"{radius_km}km",
+                "location": {
+                    "lat": lat,
+                    "lon": lon
+                }
+            }
+        })  
+
+    sort_params = []
+    if lat and lon:
+        sort_params.append({
+            "_geo_distance": {
+                "location": {"lat": lat, "lon": lon},
+                "order": "asc",
+                "unit": "km",
+                "mode": "min",
+                "distance_type": "arc"
+            }
+        })
+    
+    sort_params.append({"ad_id": "desc"})
 
     try:
         response = await client.search(

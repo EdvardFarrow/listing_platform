@@ -1,4 +1,4 @@
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 from ninja import ModelSchema, Schema
 
@@ -25,6 +25,8 @@ class AdCreate(Schema):
     city: str
     category_id: int
     attributes: Dict[str, Any] = {}
+    lat: Optional[float] = None
+    lon: Optional[float] = None
 
 
 # READ
@@ -32,6 +34,8 @@ class AdOut(ModelSchema):
     category: CategoryOut
     seller: UserOut
     attributes: Dict[str, Any] = {}
+    lat: Optional[float] = None
+    lon: Optional[float] = None
 
     class Meta:
         model = Ad
@@ -44,8 +48,16 @@ class AdOut(ModelSchema):
             "city",
             "status",
             "created_at",
-            "attributes"
+            "attributes",
         ]
+        
+    @staticmethod
+    def resolve_lat(obj):
+        return obj.location.y if obj.location else None
+
+    @staticmethod
+    def resolve_lon(obj):
+        return obj.location.x if obj.location else None
 
 
 class CategoryTree(Schema):
@@ -54,3 +66,5 @@ class CategoryTree(Schema):
     slug: str
     icon: str
     children: List['CategoryTree'] = []
+
+CategoryTree.model_rebuild()

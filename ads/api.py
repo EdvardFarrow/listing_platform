@@ -3,6 +3,7 @@ from typing import List, Optional
 from django.db import transaction
 from django.http import HttpRequest
 from django.shortcuts import get_object_or_404
+from django.contrib.gis.geos import Point
 from ninja import Router
 from ninja_jwt.authentication import JWTAuth
 
@@ -13,6 +14,7 @@ from .models import Ad, Category
 from .schemas import AdCreate, AdOut, CategoryOut, CategoryTree
 
 
+
 router = Router()
 
 
@@ -21,10 +23,20 @@ router = Router()
 async def list_ads(
     request: HttpRequest,
     q: Optional[str] = None,
+    lat: Optional[float] = None,
+    lon: Optional[float] = None,
+    radius: int = 10,
     offset: int = 0,
     limit: int = 20
 ):
-    found_ids = await search_ads(query=q, limit=limit, offset=offset)
+    found_ids = await search_ads(
+        query=q, 
+        lat=lat, 
+        lon=lon, 
+        radius_km=radius,
+        limit=limit, 
+        offset=offset,
+    )
 
     if not found_ids:
         return []
@@ -53,6 +65,10 @@ async def get_ad(request: HttpRequest, ad_id: int):
 def create_ad(request: HttpRequest, payload: AdCreate):
     with transaction.atomic():
         category = get_object_or_404(Category, id=payload.category_id)
+        
+        location = None
+        if payload.lat and payload.lon:
+            location = Point(payload.lon, payload.lat, srid=4326)
 
         ad = Ad.objects.create(
             seller=request.user,
@@ -63,8 +79,13 @@ def create_ad(request: HttpRequest, payload: AdCreate):
             currency=payload.currency,
             city=payload.city,
             attributes=payload.attributes,
+            location=location,
             status=Ad.Status.ACTIVE
         )
+        
+        geo_data = None
+        if payload.lat and payload.lon:
+            geo_data = {"lat": payload.lat, "lon": payload.lon}
 
         schedule_event(
             topic="ads_events",
@@ -76,7 +97,8 @@ def create_ad(request: HttpRequest, payload: AdCreate):
                     "description": ad.description,
                     "price": float(ad.price),
                     "city": ad.city,
-                    "attributes": ad.attributes
+                    "attributes": ad.attributes,
+                    "location": geo_data
                 }
             }
         )
