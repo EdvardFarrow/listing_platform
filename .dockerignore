@@ -27,3 +27,4 @@ Makefile
 # IDE
 .idea/
 .vscode/
+.pytest_cache/
