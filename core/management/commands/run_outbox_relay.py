@@ -24,40 +24,49 @@ class Command(BaseCommand):
         logger.info("Starting Outbox Relay...")
 
         broker = KafkaBroker(BROKER_URL)
-        await broker.connect()
+        
+        try:
+            await broker.connect()
+        except Exception as e:
+            logger.error(f"Failed to initially connect to broker: {e}")
+            return
 
         try:
             while True:
-                events_to_process = await self.fetch_events()
+                try:
+                    events_to_process = await self.fetch_events()
 
-                if not events_to_process:
-                    await asyncio.sleep(POLL_INTERVAL)
-                    continue
+                    if not events_to_process:
+                        await asyncio.sleep(POLL_INTERVAL)
+                        continue
 
-                logger.info(f"Found {len(events_to_process)} events. Processing...")
+                    logger.info(f"Found {len(events_to_process)} events. Processing...")
 
-                successful_ids = []
-                for event in events_to_process:
-                    try:
-                        await broker.publish(
-                            event.payload,
-                            topic=event.topic
-                        )
-                        successful_ids.append(event.id)
-                    except Exception as e:
-                        logger.error(f"Failed to publish event {event.id}: {e}")
-                        event.error_log = str(e)
-                        await event.asave()
+                    successful_ids = []
+                    for event in events_to_process:
+                        try:
+                            await broker.publish(
+                                event.payload,
+                                topic=event.topic
+                            )
+                            successful_ids.append(event.id)
+                        except Exception as e:
+                            logger.error(f"Failed to publish event {event.id}: {e}")
+                            event.error_log = str(e)
+                            await event.asave()
 
-                if successful_ids:
-                    await self.cleanup_events(successful_ids)
-                    logger.info(f"Successfully processed {len(successful_ids)} events")
+                    if successful_ids:
+                        await self.cleanup_events(successful_ids)
+                        logger.info(f"Successfully processed {len(successful_ids)} events")
+                        
+                except Exception as e:
+                    logger.error(f"Unexpected error in relay loop: {e}")
+                    await asyncio.sleep(5)  
 
         except KeyboardInterrupt:
             logger.info("Stopping relay...")
         finally:
             await broker.disconnect()
-
 
     @transaction.atomic
     def fetch_events_sync(self):

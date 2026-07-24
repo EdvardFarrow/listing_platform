@@ -6,13 +6,13 @@ class Conversation(models.Model):
     participants = models.ManyToManyField(
         settings.AUTH_USER_MODEL, related_name="conversations"
     )
-    ad = models.ForeignKey(
-        "ads.Ad", on_delete=models.SET_NULL, null=True, blank=True
-    )  # Чат по поводу конкретного объявления
+    application = models.ForeignKey(
+        "ads.Application", on_delete=models.SET_NULL, null=True, blank=True
+    )  # Чат по поводу конкретного отклика
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    def __str__(self)-> str:
+    def __str__(self) -> str:
         return f"Conversation {self.id}"
 
 
@@ -30,5 +30,5 @@ class Message(models.Model):
     class Meta:
         ordering = ["created_at"]
 
-    def __str__(self)-> str:
+    def __str__(self) -> str:
         return f"Message {self.id} from {self.sender}"

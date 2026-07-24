@@ -7,4 +7,4 @@ api.register_controllers(NinjaJWTDefaultController)
 
 from ads.api import router as ads_router
 
-api.add_router("/ads", ads_router)
+api.add_router("/jobs", ads_router)

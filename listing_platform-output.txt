@@ -1,3 +1,4051 @@
+====================================================================================================
+PROJECT EXPORT FOR LLMs
+====================================================================================================
+
+PROJECT INFORMATION:
+--------------------------------------------------
+Project Name: listing_platform
+Generated On: 2026-07-24 11:04:23 (Asia/Tbilisi / GMT+04:00)
+Total Files Processed: 132
+Export Tool: Easy Whole Project to Single Text File for LLMs v1.1.0
+Tool Author: Jota / José Guilherme Pandolfi
+
+EXPORT CONFIGURATION:
+--------------------------------------------------
+Language: en
+Max File Size: 1 MB
+Include Hidden Files: false
+Output Format: both
+Notification Level: minimal
+Custom File Name Pattern: {workspaceName}-output
+
+================================================================================
+PROJECT STRUCTURE
+================================================================================
+├── 📁 ads/
+│   ├── 📁 __pycache__/
+│   │   ├── 📄 __init__.cpython-312.pyc (152 B)
+│   │   ├── 📄 __init__.cpython-314.pyc (154 B)
+│   │   ├── 📄 admin.cpython-312.pyc (149 B)
+│   │   ├── 📄 admin.cpython-314.pyc (198 B)
+│   │   ├── 📄 api.cpython-312.pyc (3.25 KB)
+│   │   ├── 📄 api.cpython-314.pyc (3.63 KB)
+│   │   ├── 📄 apps.cpython-312.pyc (391 B)
+│   │   ├── 📄 apps.cpython-314.pyc (448 B)
+│   │   ├── 📄 filters.cpython-312.pyc (698 B)
+│   │   ├── 📄 filters.cpython-314.pyc (1008 B)
+│   │   ├── 📄 models.cpython-312.pyc (3.64 KB)
+│   │   ├── 📄 models.cpython-314.pyc (4.07 KB)
+│   │   ├── 📄 schemas.cpython-312.pyc (1.81 KB)
+│   │   └── 📄 schemas.cpython-314.pyc (2.72 KB)
+│   ├── 📁 migrations/
+│   │   ├── 📁 __pycache__/
+│   │   │   ├── 📄 __init__.cpython-312.pyc (163 B)
+│   │   │   ├── 📄 __init__.cpython-314.pyc (165 B)
+│   │   │   ├── 📄 0001_initial.cpython-312.pyc (2.74 KB)
+│   │   │   ├── 📄 0001_initial.cpython-314.pyc (2.71 KB)
+│   │   │   ├── 📄 0002_initial.cpython-312.pyc (2.41 KB)
+│   │   │   ├── 📄 0002_initial.cpython-314.pyc (2.44 KB)
+│   │   │   ├── 📄 0003_install_trigram.cpython-312.pyc (577 B)
+│   │   │   └── 📄 0003_install_trigram.cpython-314.pyc (634 B)
+│   │   ├── 📄 __init__.py
+│   │   ├── 📄 0001_initial.py (2.1 KB)
+│   │   ├── 📄 0002_initial.py (1.17 KB)
+│   │   ├── 📄 0003_application_company_resume_vacancy_and_more.py (6.27 KB)
+│   │   └── 📄 0004_delete_ad.py (386 B)
+│   ├── 📁 tests/
+│   │   ├── 📄 __init__.py
+│   │   └── 📄 test_api.py (3.68 KB)
+│   ├── 📄 __init__.py
+│   ├── 📄 admin.py (349 B)
+│   ├── 📄 api.py (4.13 KB)
+│   ├── 📄 apps.py (81 B)
+│   ├── 📄 filters.py (298 B)
+│   ├── 📄 models.py (4.19 KB)
+│   ├── 📄 schemas.py (2.03 KB)
+│   ├── 📄 services.py (586 B)
+│   └── 📄 views.py (27 B)
+├── 📁 chat/
+│   ├── 📁 __pycache__/
+│   │   ├── 📄 __init__.cpython-312.pyc (153 B)
+│   │   ├── 📄 __init__.cpython-314.pyc (155 B)
+│   │   ├── 📄 admin.cpython-312.pyc (150 B)
+│   │   ├── 📄 admin.cpython-314.pyc (199 B)
+│   │   ├── 📄 apps.cpython-312.pyc (394 B)
+│   │   ├── 📄 apps.cpython-314.pyc (451 B)
+│   │   ├── 📄 consumers.cpython-314.pyc (3.55 KB)
+│   │   ├── 📄 models.cpython-312.pyc (2.25 KB)
+│   │   ├── 📄 models.cpython-314.pyc (2.34 KB)
+│   │   └── 📄 routing.cpython-314.pyc (421 B)
+│   ├── 📁 migrations/
+│   │   ├── 📁 __pycache__/
+│   │   │   ├── 📄 __init__.cpython-312.pyc (164 B)
+│   │   │   ├── 📄 __init__.cpython-314.pyc (166 B)
+│   │   │   ├── 📄 0001_initial.cpython-312.pyc (2.5 KB)
+│   │   │   └── 📄 0001_initial.cpython-314.pyc (2.51 KB)
+│   │   ├── 📄 __init__.py
+│   │   ├── 📄 0001_initial.py (1.23 KB)
+│   │   ├── 📄 0002_initial.py (1.04 KB)
+│   │   └── 📄 0003_remove_conversation_ad_conversation_application.py (665 B)
+│   ├── 📁 tests/
+│   │   ├── 📄 __init__.py
+│   │   └── 📄 test_websockets.py (1.36 KB)
+│   ├── 📄 __init__.py
+│   ├── 📄 admin.py (30 B)
+│   ├── 📄 apps.py (83 B)
+│   ├── 📄 consumers.py (1.96 KB)
+│   ├── 📄 models.py (1.1 KB)
+│   ├── 📄 routing.py (172 B)
+│   └── 📄 views.py (27 B)
+├── 📁 core/
+│   ├── 📁 __pycache__/
+│   │   ├── 📄 __init__.cpython-312.pyc (227 B)
+│   │   ├── 📄 __init__.cpython-314.pyc (155 B)
+│   │   ├── 📄 api.cpython-312.pyc (489 B)
+│   │   ├── 📄 api.cpython-314.pyc (414 B)
+│   │   ├── 📄 apps.cpython-312.pyc (455 B)
+│   │   ├── 📄 asgi.cpython-314.pyc (779 B)
+│   │   ├── 📄 celery.cpython-312.pyc (862 B)
+│   │   ├── 📄 event_bus.cpython-312.pyc (798 B)
+│   │   ├── 📄 settings.cpython-312.pyc (3.03 KB)
+│   │   ├── 📄 settings.cpython-314.pyc (2.58 KB)
+│   │   ├── 📄 urls.cpython-312.pyc (445 B)
+│   │   └── 📄 urls.cpython-314.pyc (442 B)
+│   ├── 📁 docker/
+│   │   ├── 📁 clickhouse/
+│   │   │   └── 📄 init.sql (925 B)
+│   │   └── 📁 prometheus/
+│   │       └── 📄 prometheus.yml (184 B)
+│   ├── 📁 management/
+│   │   └── 📁 commands/
+│   │       └── 📄 run_outbox_relay.py (2.68 KB)
+│   ├── 📁 migrations/
+│   │   ├── 📄 __init__.py
+│   │   └── 📄 0001_initial.py (928 B)
+│   ├── 📁 tests/
+│   │   ├── 📄 __init__.py
+│   │   └── 📄 test_search.py (1.08 KB)
+│   ├── 📄 __init__.py (65 B)
+│   ├── 📄 api.py (251 B)
+│   ├── 📄 apps.py (140 B)
+│   ├── 📄 asgi.py (504 B)
+│   ├── 📄 celery.py (323 B)
+│   ├── 📄 event_bus.py (260 B)
+│   ├── 📄 middleware.py (1.38 KB)
+│   ├── 📄 models.py (466 B)
+│   ├── 📄 search.py (2.14 KB)
+│   ├── 📄 services.py (136 B)
+│   ├── 📄 settings.py (4.29 KB)
+│   ├── 📄 urls.py (226 B)
+│   └── 📄 wsgi.py (385 B)
+├── 📁 docker/
+│   ├── 📁 clickhouse/
+│   │   └── 📁 init.sql/
+│   ├── 📁 prometheus/
+│   │   └── 📄 prometheus.yml
+│   └── 📁 promtail/
+│       └── 📄 config.yml (417 B)
+├── 📁 search_service/
+│   ├── 📄 __init__.py
+│   ├── 📄 main.py (2.95 KB)
+│   └── 📄 tests.py (1.68 KB)
+├── 📁 users/
+│   ├── 📁 __pycache__/
+│   │   ├── 📄 __init__.cpython-312.pyc (154 B)
+│   │   ├── 📄 __init__.cpython-314.pyc (156 B)
+│   │   ├── 📄 admin.cpython-312.pyc (151 B)
+│   │   ├── 📄 admin.cpython-314.pyc (200 B)
+│   │   ├── 📄 apps.cpython-312.pyc (397 B)
+│   │   ├── 📄 apps.cpython-314.pyc (454 B)
+│   │   ├── 📄 models.cpython-312.pyc (829 B)
+│   │   └── 📄 models.cpython-314.pyc (927 B)
+│   ├── 📁 migrations/
+│   │   ├── 📁 __pycache__/
+│   │   │   ├── 📄 __init__.cpython-312.pyc (165 B)
+│   │   │   ├── 📄 __init__.cpython-314.pyc (167 B)
+│   │   │   ├── 📄 0001_initial.cpython-312.pyc (3.75 KB)
+│   │   │   └── 📄 0001_initial.cpython-314.pyc (3.75 KB)
+│   │   ├── 📄 __init__.py
+│   │   └── 📄 0001_initial.py (2.99 KB)
+│   ├── 📄 __init__.py
+│   ├── 📄 admin.py (144 B)
+│   ├── 📄 apps.py (85 B)
+│   ├── 📄 models.py (318 B)
+│   ├── 📄 tests.py (27 B)
+│   └── 📄 views.py (27 B)
+├── 📄 docker-compose.yml (5.32 KB)
+├── 📄 Dockerfile (585 B)
+├── 📄 main.py (94 B)
+├── 📄 Makefile (1.27 KB)
+├── 📄 manage.py (669 B)
+├── 📄 pyproject.toml (1.41 KB)
+├── 📄 pytest.ini (112 B)
+├── 📄 README.md
+├── 📄 repomix-output.xml (1.15 MB)
+└── 📄 uv.lock (430.25 KB)
+
+================================================================================
+PROJECT STATISTICS
+================================================================================
+Total Files: 132
+Total Directories: 29
+Text Files: 70
+Binary Files: 62
+Total Size: 1.7 MB
+
+FILE TYPES DISTRIBUTION:
+------------------------------
+.pyc            : 60
+.py             : 60
+.yml            : 4
+no extension    : 2
+.sql            : 1
+.toml           : 1
+.ini            : 1
+.md             : 1
+.xml            : 1
+.lock           : 1
+
+================================================================================
+FILE CODE CONTENTS
+================================================================================
+
+
+================================================================================
+BINARY/EXCLUDED FILES (not included in text content)
+================================================================================
+- ads/__pycache__/__init__.cpython-312.pyc
+- ads/__pycache__/__init__.cpython-314.pyc
+- ads/__pycache__/admin.cpython-312.pyc
+- ads/__pycache__/admin.cpython-314.pyc
+- ads/__pycache__/api.cpython-312.pyc
+- ads/__pycache__/api.cpython-314.pyc
+- ads/__pycache__/apps.cpython-312.pyc
+- ads/__pycache__/apps.cpython-314.pyc
+- ads/__pycache__/filters.cpython-312.pyc
+- ads/__pycache__/filters.cpython-314.pyc
+- ads/__pycache__/models.cpython-312.pyc
+- ads/__pycache__/models.cpython-314.pyc
+- ads/__pycache__/schemas.cpython-312.pyc
+- ads/__pycache__/schemas.cpython-314.pyc
+
+
+================================================================================
+BINARY/EXCLUDED FILES (not included in text content)
+================================================================================
+- ads/migrations/__pycache__/__init__.cpython-312.pyc
+- ads/migrations/__pycache__/__init__.cpython-314.pyc
+- ads/migrations/__pycache__/0001_initial.cpython-312.pyc
+- ads/migrations/__pycache__/0001_initial.cpython-314.pyc
+- ads/migrations/__pycache__/0002_initial.cpython-312.pyc
+- ads/migrations/__pycache__/0002_initial.cpython-314.pyc
+- ads/migrations/__pycache__/0003_install_trigram.cpython-312.pyc
+- ads/migrations/__pycache__/0003_install_trigram.cpython-314.pyc
+
+
+================================================================================
+FILE: ads/migrations/__init__.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 0 B
+Extension: .py
+Language: python
+Location: ads/migrations/__init__.py
+Relative Path: ads/migrations
+Created: 2026-02-01 12:43:33 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 12:43:33 (Asia/Tbilisi / GMT+04:00)
+MD5: d41d8cd98f00b204e9800998ecf8427e
+SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+FILE: ads/migrations/0001_initial.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 2.1 KB
+Extension: .py
+Language: python
+Location: ads/migrations/0001_initial.py
+Relative Path: ads/migrations
+Created: 2026-02-08 12:37:34 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-08 12:37:34 (Asia/Tbilisi / GMT+04:00)
+MD5: a507dae779ef7af99e30e9380b870f8e
+SHA256: 71bc651400bcbe49e3fee8d81fa639a8a6b077c42f09f97b2884b24b82c44a0f
+Encoding: UTF-8
+
+FILE CONTENT:
+----------------------------------------
+# Generated by Django 6.0.1 on 2026-02-08 12:37
+
+import django.contrib.gis.db.models.fields
+from django.db import migrations, models
+
+
+class Migration(migrations.Migration):
+
+    initial = True
+
+    dependencies = [
+    ]
+
+    operations = [
+        migrations.CreateModel(
+            name='Ad',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('title', models.CharField(max_length=200)),
+                ('description', models.TextField()),
+                ('price', models.DecimalField(decimal_places=2, max_digits=12)),
+                ('currency', models.CharField(default='TJS', max_length=3)),
+                ('attributes', models.JSONField(blank=True, default=dict)),
+                ('location', django.contrib.gis.db.models.fields.PointField(null=True, srid=4326)),
+                ('city', models.CharField(db_index=True, max_length=50)),
+                ('status', models.CharField(choices=[('active', 'Активно'), ('sold', 'Продано'), ('draft', 'Черновик'), ('rejected', 'Отклонено')], db_index=True, default='draft', max_length=10)),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+                ('updated_at', models.DateTimeField(auto_now=True)),
+            ],
+            options={
+                'ordering': ['-created_at'],
+            },
+        ),
+        migrations.CreateModel(
+            name='Category',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('path', models.CharField(max_length=255, unique=True)),
+                ('depth', models.PositiveIntegerField()),
+                ('numchild', models.PositiveIntegerField(default=0)),
+                ('name', models.CharField(max_length=100)),
+                ('slug', models.SlugField(unique=True)),
+                ('icon', models.CharField(blank=True, max_length=50)),
+            ],
+            options={
+                'verbose_name_plural': 'Categories',
+            },
+        ),
+    ]
+
+================================================================================
+
+
+================================================================================
+FILE: ads/migrations/0002_initial.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 1.17 KB
+Extension: .py
+Language: python
+Location: ads/migrations/0002_initial.py
+Relative Path: ads/migrations
+Created: 2026-02-08 12:37:34 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-08 12:37:34 (Asia/Tbilisi / GMT+04:00)
+MD5: 498d6546105171419055e4b7ccb5323d
+SHA256: 3b7d8155b6d881686a58e9f0a6066d6e682be774450f61851d6f19497bc15f72
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+# Generated by Django 6.0.1 on 2026-02-08 12:37
+
+import django.contrib.postgres.indexes
+import django.db.models.deletion
+from django.conf import settings
+from django.db import migrations, models
+
+
+class Migration(migrations.Migration):
+
+    initial = True
+
+    dependencies = [
+        ('ads', '0001_initial'),
+        migrations.swappable_dependency(settings.AUTH_USER_MODEL),
+    ]
+
+    operations = [
+        migrations.AddField(
+            model_name='ad',
+            name='seller',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='ads', to=settings.AUTH_USER_MODEL),
+        ),
+        migrations.AddField(
+            model_name='ad',
+            name='category',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='ads', to='ads.category'),
+        ),
+        migrations.AddIndex(
+            model_name='ad',
+            index=models.Index(fields=['status', '-created_at'], name='ads_ad_status_df5568_idx'),
+        ),
+        migrations.AddIndex(
+            model_name='ad',
+            index=django.contrib.postgres.indexes.GinIndex(fields=['attributes'], name='ad_attributes_gin'),
+        ),
+    ]
+
+================================================================================
+
+
+================================================================================
+FILE: ads/migrations/0003_application_company_resume_vacancy_and_more.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 6.27 KB
+Extension: .py
+Language: python
+Location: ads/migrations/0003_application_company_resume_vacancy_and_more.py
+Relative Path: ads/migrations
+Created: 2026-07-23 12:45:12 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 12:45:12 (Asia/Tbilisi / GMT+04:00)
+MD5: 542b2e05a3a4693500c15c8dfa845d5e
+SHA256: 33e57516f35430459606e5ebbf0cb3409100bd063904485b048017c05c869e06
+Encoding: UTF-8
+
+FILE CONTENT:
+----------------------------------------
+# Generated by Django 6.0.1 on 2026-07-23 12:45
+
+import django.contrib.gis.db.models.fields
+import django.contrib.postgres.indexes
+import django.db.models.deletion
+from django.conf import settings
+from django.db import migrations, models
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        ('ads', '0002_initial'),
+        migrations.swappable_dependency(settings.AUTH_USER_MODEL),
+    ]
+
+    operations = [
+        migrations.CreateModel(
+            name='Application',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('cover_letter', models.TextField(blank=True)),
+                ('status', models.CharField(choices=[('new', 'Новый'), ('viewed', 'Просмотрен'), ('rejected', 'Отказ'), ('offer', 'Оффер')], db_index=True, default='new', max_length=10)),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+            ],
+        ),
+        migrations.CreateModel(
+            name='Company',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('name', models.CharField(max_length=255)),
+                ('description', models.TextField(blank=True)),
+                ('logo', models.ImageField(blank=True, null=True, upload_to='companies/logos/')),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+            ],
+        ),
+        migrations.CreateModel(
+            name='Resume',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('title', models.CharField(max_length=200)),
+                ('about', models.TextField()),
+                ('expected_salary', models.DecimalField(blank=True, decimal_places=2, max_digits=12, null=True)),
+                ('currency', models.CharField(default='RUB', max_length=3)),
+                ('attributes', models.JSONField(blank=True, default=dict)),
+                ('status', models.CharField(choices=[('published', 'Опубликовано'), ('hidden', 'Скрыто')], db_index=True, default='hidden', max_length=10)),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+            ],
+        ),
+        migrations.CreateModel(
+            name='Vacancy',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('title', models.CharField(max_length=200)),
+                ('description', models.TextField()),
+                ('salary_from', models.DecimalField(blank=True, decimal_places=2, max_digits=12, null=True)),
+                ('salary_to', models.DecimalField(blank=True, decimal_places=2, max_digits=12, null=True)),
+                ('currency', models.CharField(default='RUB', max_length=3)),
+                ('attributes', models.JSONField(blank=True, default=dict)),
+                ('location', django.contrib.gis.db.models.fields.PointField(null=True, srid=4326)),
+                ('city', models.CharField(db_index=True, max_length=50)),
+                ('status', models.CharField(choices=[('active', 'Активно'), ('closed', 'Закрыто'), ('draft', 'Черновик')], db_index=True, default='draft', max_length=10)),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+                ('updated_at', models.DateTimeField(auto_now=True)),
+            ],
+            options={
+                'ordering': ['-created_at'],
+            },
+        ),
+        migrations.RemoveIndex(
+            model_name='ad',
+            name='ads_ad_status_df5568_idx',
+        ),
+        migrations.RemoveIndex(
+            model_name='ad',
+            name='ad_attributes_gin',
+        ),
+        migrations.AddField(
+            model_name='company',
+            name='owner',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='companies', to=settings.AUTH_USER_MODEL),
+        ),
+        migrations.AddField(
+            model_name='resume',
+            name='category',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='resumes', to='ads.category'),
+        ),
+        migrations.AddField(
+            model_name='resume',
+            name='user',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='resumes', to=settings.AUTH_USER_MODEL),
+        ),
+        migrations.AddField(
+            model_name='application',
+            name='resume',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='applications', to='ads.resume'),
+        ),
+        migrations.AddField(
+            model_name='vacancy',
+            name='category',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='vacancies', to='ads.category'),
+        ),
+        migrations.AddField(
+            model_name='vacancy',
+            name='company',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='vacancies', to='ads.company'),
+        ),
+        migrations.AddField(
+            model_name='application',
+            name='vacancy',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='applications', to='ads.vacancy'),
+        ),
+        migrations.RemoveField(
+            model_name='ad',
+            name='category',
+        ),
+        migrations.RemoveField(
+            model_name='ad',
+            name='seller',
+        ),
+        migrations.AddIndex(
+            model_name='resume',
+            index=django.contrib.postgres.indexes.GinIndex(fields=['attributes'], name='resume_attributes_gin'),
+        ),
+        migrations.AddIndex(
+            model_name='vacancy',
+            index=models.Index(fields=['status', '-created_at'], name='ads_vacancy_status_c50ad3_idx'),
+        ),
+        migrations.AddIndex(
+            model_name='vacancy',
+            index=django.contrib.postgres.indexes.GinIndex(fields=['attributes'], name='vacancy_attributes_gin'),
+        ),
+        migrations.AlterUniqueTogether(
+            name='application',
+            unique_together={('vacancy', 'resume')},
+        ),
+    ]
+
+================================================================================
+
+
+================================================================================
+FILE: ads/migrations/0004_delete_ad.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 386 B
+Extension: .py
+Language: python
+Location: ads/migrations/0004_delete_ad.py
+Relative Path: ads/migrations
+Created: 2026-07-23 12:45:12 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 12:45:12 (Asia/Tbilisi / GMT+04:00)
+MD5: c14e37d85ba479cb1b537e85771cc84e
+SHA256: 6f31d88b3ebbfb4eae08705c60e7fa138dc2200ad84b31f1115b8ca1f7aca609
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+# Generated by Django 6.0.1 on 2026-07-23 12:45
+
+from django.db import migrations
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        ('ads', '0003_application_company_resume_vacancy_and_more'),
+        ('chat', '0003_remove_conversation_ad_conversation_application'),
+    ]
+
+    operations = [
+        migrations.DeleteModel(
+            name='Ad',
+        ),
+    ]
+
+================================================================================
+
+
+================================================================================
+FILE: ads/tests/__init__.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 0 B
+Extension: .py
+Language: python
+Location: ads/tests/__init__.py
+Relative Path: ads/tests
+Created: 2026-07-23 13:37:06 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 13:37:06 (Asia/Tbilisi / GMT+04:00)
+MD5: d41d8cd98f00b204e9800998ecf8427e
+SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+FILE: ads/tests/test_api.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 3.68 KB
+Extension: .py
+Language: python
+Location: ads/tests/test_api.py
+Relative Path: ads/tests
+Created: 2026-02-01 12:43:33 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 13:49:35 (Asia/Tbilisi / GMT+04:00)
+MD5: c34947fe1caed382ac5acc35a117afbd
+SHA256: 3d7f58afbebd66760af8c06b15771aebb551cab50c68e896d6899f22754f0863
+Encoding: UTF-8
+
+FILE CONTENT:
+----------------------------------------
+import pytest
+from django.test import Client
+from ninja_jwt.tokens import RefreshToken
+
+from ads.models import Category, Company
+from core.models import OutboxEvent
+
+
+@pytest.fixture
+def auth_client(django_user_model):
+    """Фикстура для создания клиента с JWT токеном"""
+    user = django_user_model.objects.create_user(username="test_hr", password="pwd")
+    refresh = RefreshToken.for_user(user)
+    
+    client = Client()
+    client.defaults["HTTP_AUTHORIZATION"] = f"Bearer {refresh.access_token}"
+    return client, user
+
+
+@pytest.mark.django_db
+def test_create_vacancy_generates_outbox_event(auth_client):
+    client, user = auth_client
+    
+    category = Category.add_root(name="Development", slug="dev")
+    Company.objects.create(name="TechCorp", owner=user)
+
+    payload = {
+        "category_id": category.id,
+        "title": "Senior Python Developer",
+        "description": "FastAPI, Django, Kafka",
+        "salary_from": 300000,
+        "currency": "RUB",
+        "city": "Batumi",
+        "attributes": {"grade": "Senior", "format": "Remote"},
+        "lat": 41.6168,
+        "lon": 41.6367
+    }
+
+    response = client.post(
+        "/api/jobs/vacancies", 
+        data=payload, 
+        content_type="application/json"
+    )
+    
+    assert response.status_code == 200, response.json()
+    data = response.json()
+    assert data["title"] == payload["title"]
+
+    outbox_events = OutboxEvent.objects.filter(processed=False)
+    assert outbox_events.count() == 1
+    
+    event = outbox_events.first()
+    assert event.topic == "vacancies_events"
+    assert event.payload["event"] == "created"
+    assert event.payload["data"]["vacancy_id"] == data["id"]
+    assert event.payload["data"]["city"] == "Batumi"
+    
+from unittest.mock import patch
+from model_bakery import baker
+from ads.models import Vacancy
+
+@pytest.mark.django_db
+@patch("ads.api.search_vacancies")
+def test_list_vacancies(mock_search_vacancies, auth_client):
+    client, _ = auth_client
+    
+    vacancies = baker.make(Vacancy, _quantity=3)
+    
+    mock_search_vacancies.return_value = [v.id for v in vacancies]
+    
+    response = client.get("/api/jobs/vacancies?q=developer&limit=10")
+    
+    assert response.status_code == 200
+    data = response.json()
+    assert len(data) == 3
+    
+    mock_search_vacancies.assert_called_once_with(
+        query="developer",
+        lat=None,
+        lon=None,
+        radius_km=10,
+        limit=10,
+        offset=0
+    )
+
+
+@pytest.mark.django_db
+def test_get_vacancy(auth_client):
+    client, user = auth_client
+    vacancy = baker.make(Vacancy)
+    
+    response = client.get(f"/api/jobs/vacancies/{vacancy.id}")
+    
+    assert response.status_code == 200
+    assert response.json()["id"] == vacancy.id
+    assert response.json()["title"] == vacancy.title
+
+@pytest.mark.django_db
+def test_list_categories(auth_client):
+    client, _ = auth_client
+    
+    root = Category.add_root(name="IT", slug="it")
+    root.add_child(name="Backend", slug="backend")
+    
+    response = client.get("/api/jobs/categories")
+    
+    assert response.status_code == 200
+    data = response.json()
+    assert len(data) >= 1
+    assert data[0]["name"] == "IT"
+    assert len(data[0]["children"]) == 1
+    assert data[0]["children"][0]["name"] == "Backend"
+
+@pytest.mark.django_db
+def test_get_category_breadcrumbs(auth_client):
+    client, _ = auth_client
+    
+    root = Category.add_root(name="IT", slug="it")
+    child = root.add_child(name="Backend", slug="backend")
+    
+    response = client.get(f"/api/jobs/categories/{child.id}/breadcrumbs")
+    
+    assert response.status_code == 200
+    data = response.json()
+    assert len(data) == 2
+    assert data[0]["id"] == root.id
+    assert data[1]["id"] == child.id
+================================================================================
+
+
+================================================================================
+FILE: ads/__init__.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 0 B
+Extension: .py
+Language: python
+Location: ads/__init__.py
+Relative Path: ads
+Created: 2026-02-01 12:43:33 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 12:43:33 (Asia/Tbilisi / GMT+04:00)
+MD5: d41d8cd98f00b204e9800998ecf8427e
+SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+FILE: ads/admin.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 349 B
+Extension: .py
+Language: python
+Location: ads/admin.py
+Relative Path: ads
+Created: 2026-02-01 12:43:33 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 12:40:08 (Asia/Tbilisi / GMT+04:00)
+MD5: 56633f1399e6674567c22ad7ffdaf0a5
+SHA256: 95788fd754964812d531e4df8ee81e61ebaa8410cff31bbc21e6530fc4200240
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+from django.contrib import admin
+from treebeard.admin import TreeAdmin
+from treebeard.forms import movenodeform_factory
+from .models import Category
+
+
+class CategoryAdmin(TreeAdmin):
+    form = movenodeform_factory(Category)
+    list_display = ["name", "slug"]
+    list_display_links = ["name"]
+
+admin.site.register(Category, CategoryAdmin)
+
+
+
+    
+
+================================================================================
+
+
+================================================================================
+FILE: ads/api.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 4.13 KB
+Extension: .py
+Language: python
+Location: ads/api.py
+Relative Path: ads
+Created: 2026-02-01 13:25:34 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 13:28:16 (Asia/Tbilisi / GMT+04:00)
+MD5: b9b046c771a2b407cc627d51335b3f98
+SHA256: 091d1f0cf86ea53cf93684940459aa4672ea47011b0c32ec009dc662a5c0a407
+Encoding: UTF-8
+
+FILE CONTENT:
+----------------------------------------
+from typing import List, Optional
+
+from django.db import transaction
+from django.http import HttpRequest
+from django.shortcuts import get_object_or_404
+from django.contrib.gis.geos import Point
+from ninja import Router
+from ninja_jwt.authentication import JWTAuth
+
+from core.search import search_vacancies
+from core.services import schedule_event
+
+from .models import Category, Company, Vacancy, Resume
+from .schemas import (
+    VacancyCreate, VacancyOut,
+    ResumeCreate, ResumeOut,
+    CategoryOut, CategoryTree
+)
+
+router = Router()
+
+# =======================
+# ВАКАНСИИ
+# =======================
+
+@router.get("/vacancies", response=List[VacancyOut])
+async def list_vacancies(
+    request: HttpRequest,
+    q: Optional[str] = None,
+    lat: Optional[float] = None,
+    lon: Optional[float] = None,
+    radius: int = 10,
+    offset: int = 0,
+    limit: int = 20
+):
+    found_ids = await search_vacancies(
+        query=q, lat=lat, lon=lon, radius_km=radius, limit=limit, offset=offset
+    )
+    
+    if not found_ids:
+        return []
+
+    qs = Vacancy.objects.select_related("category", "company").filter(id__in=found_ids)
+    
+    vacancies_map = {v.id: v async for v in qs}
+    sorted_results = [vacancies_map[vid] for vid in found_ids if vid in vacancies_map]
+
+    return sorted_results
+
+@router.get("/vacancies/{vacancy_id}", response=VacancyOut)
+async def get_vacancy(request: HttpRequest, vacancy_id: int):
+    return await Vacancy.objects.select_related("category", "company").aget(id=vacancy_id)
+
+@router.post("/vacancies", response=VacancyOut, auth=JWTAuth())
+def create_vacancy(request: HttpRequest, payload: VacancyCreate):
+    with transaction.atomic():
+        category = get_object_or_404(Category, id=payload.category_id)
+        
+        # Заглушка: ищем компанию юзера, если нет - создаем дефолтную
+        company, _ = Company.objects.get_or_create(
+            owner=request.user,
+            defaults={"name": f"Компания пользователя {request.user.username}"}
+        )
+        
+        location = None
+        if payload.lat and payload.lon:
+            location = Point(payload.lon, payload.lat, srid=4326)
+
+        vacancy = Vacancy.objects.create(
+            company=company,
+            category=category,
+            title=payload.title,
+            description=payload.description,
+            salary_from=payload.salary_from,
+            salary_to=payload.salary_to,
+            currency=payload.currency,
+            city=payload.city,
+            attributes=payload.attributes,
+            location=location,
+            status=Vacancy.Status.ACTIVE
+        )
+        
+        geo_data = None
+        if payload.lat and payload.lon:
+            geo_data = {"lat": payload.lat, "lon": payload.lon}
+
+        schedule_event(
+            topic="vacancies_events",
+            data={
+                "event": "created",
+                "data": {
+                    "vacancy_id": vacancy.id,
+                    "title": vacancy.title,
+                    "description": vacancy.description,
+                    "salary_from": float(vacancy.salary_from) if vacancy.salary_from else None,
+                    "salary_to": float(vacancy.salary_to) if vacancy.salary_to else None,
+                    "city": vacancy.city,
+                    "attributes": vacancy.attributes,
+                    "location": geo_data
+                }
+            }
+        )
+    return vacancy
+
+
+# =======================
+# КАТЕГОРИИ
+# =======================
+
+@router.get("/categories", response=List[CategoryTree])
+def list_categories(request):
+    tree_data = Category.dump_bulk()
+    
+    def flatten_category(node):
+        data = node.pop('data') 
+        node.update(data)
+        
+        if 'children' in node:
+            for child in node['children']:
+                flatten_category(child)
+        return node
+
+    return [flatten_category(node) for node in tree_data]
+
+@router.get("/categories/{category_id}/breadcrumbs", response=List[CategoryOut])
+def get_category_breadcrumbs(request, category_id: int):
+    category = get_object_or_404(Category, id=category_id)
+    return list(category.get_ancestors()) + [category]
+================================================================================
+
+
+================================================================================
+FILE: ads/apps.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 81 B
+Extension: .py
+Language: python
+Location: ads/apps.py
+Relative Path: ads
+Created: 2026-02-01 12:43:33 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 15:20:01 (Asia/Tbilisi / GMT+04:00)
+MD5: 19960307f834d2f78a33e6fdd4228aa7
+SHA256: d3c0203b20d6b9fc4305c962de8fb95bb95d4b4c27e69e95c43da206a19b400a
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+from django.apps import AppConfig
+
+
+class AdsConfig(AppConfig):
+    name = "ads"
+
+================================================================================
+
+
+================================================================================
+FILE: ads/filters.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 298 B
+Extension: .py
+Language: python
+Location: ads/filters.py
+Relative Path: ads
+Created: 2026-02-01 13:58:02 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 15:33:31 (Asia/Tbilisi / GMT+04:00)
+MD5: b42051dcb21cd4b1e77bcdd1b1c5025b
+SHA256: adc96229370eb69362dfcd374da4fde99aeab7bcfb358736c658d687247a457a
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+from typing import Optional
+
+from ninja import Field, FilterSchema
+
+
+class AdFilter(FilterSchema):
+    city: Optional[str] = None
+    min_price: Optional[float] = Field(default=None, q="price__gte") # type: ignore
+    max_price: Optional[float] = Field(default=None, q="price__lte") # type: ignore
+
+================================================================================
+
+
+================================================================================
+FILE: ads/models.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 4.19 KB
+Extension: .py
+Language: python
+Location: ads/models.py
+Relative Path: ads
+Created: 2026-02-01 12:43:33 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 12:27:48 (Asia/Tbilisi / GMT+04:00)
+MD5: b8e8aa9ab470007b10f4d3d66c15f460
+SHA256: 5dddb358b36b31ea9195a85fe3b4550d2279936b34912d38649d972690cd9b33
+Encoding: UTF-8
+
+FILE CONTENT:
+----------------------------------------
+from django.conf import settings
+from django.contrib.gis.db import models
+from django.contrib.postgres.indexes import GinIndex
+from treebeard.mp_tree import MP_Node
+
+
+class Category(MP_Node):
+    name = models.CharField(max_length=100)
+    slug = models.SlugField(unique=True)
+    icon = models.CharField(max_length=50, blank=True)
+
+    node_order_by = ['name']
+
+    class Meta:
+        verbose_name_plural = "Categories"
+
+    def __str__(self):
+        return self.name
+
+class Company(models.Model):
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="companies")
+    name = models.CharField(max_length=255)
+    description = models.TextField(blank=True)
+    logo = models.ImageField(upload_to="companies/logos/", blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+class Vacancy(models.Model):
+    class Status(models.TextChoices):
+        ACTIVE = "active", "Активно"
+        CLOSED = "closed", "Закрыто"
+        DRAFT = "draft", "Черновик"
+
+    company = models.ForeignKey(Company, on_delete=models.CASCADE, related_name="vacancies")
+    category = models.ForeignKey(Category, on_delete=models.PROTECT, related_name="vacancies")
+    
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    
+    salary_from = models.DecimalField(max_digits=12, decimal_places=2, null=True, blank=True)
+    salary_to = models.DecimalField(max_digits=12, decimal_places=2, null=True, blank=True)
+    currency = models.CharField(max_length=3, default="RUB")
+
+    # Сюда пишем теги: {"skills": ["Python", "FastAPI"], "grade": "Middle", "format": "Remote"}
+    attributes = models.JSONField(default=dict, blank=True)
+
+    location = models.PointField(srid=4326, null=True, spatial_index=True)
+    city = models.CharField(max_length=50, db_index=True)
+
+    status = models.CharField(max_length=10, choices=Status.choices, default=Status.DRAFT, db_index=True)
+    
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["-created_at"]
+        indexes = [
+            models.Index(fields=["status", "-created_at"]),
+            GinIndex(fields=["attributes"], name="vacancy_attributes_gin"),
+        ]
+
+    def __str__(self):
+        return self.title
+
+class Resume(models.Model):
+    class Status(models.TextChoices):
+        PUBLISHED = "published", "Опубликовано"
+        HIDDEN = "hidden", "Скрыто"
+
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="resumes")
+    category = models.ForeignKey(Category, on_delete=models.PROTECT, related_name="resumes")
+    
+    title = models.CharField(max_length=200) # Например: "Senior Backend Developer"
+    about = models.TextField()
+    
+    expected_salary = models.DecimalField(max_digits=12, decimal_places=2, null=True, blank=True)
+    currency = models.CharField(max_length=3, default="RUB")
+
+    # Сюда складываем скиллы и опыт
+    attributes = models.JSONField(default=dict, blank=True)
+
+    status = models.CharField(max_length=10, choices=Status.choices, default=Status.HIDDEN, db_index=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        indexes = [GinIndex(fields=["attributes"], name="resume_attributes_gin")]
+
+class Application(models.Model):
+    """Отклики на вакансии"""
+    class Status(models.TextChoices):
+        NEW = "new", "Новый"
+        VIEWED = "viewed", "Просмотрен"
+        REJECTED = "rejected", "Отказ"
+        OFFER = "offer", "Оффер"
+
+    vacancy = models.ForeignKey(Vacancy, on_delete=models.CASCADE, related_name="applications")
+    resume = models.ForeignKey(Resume, on_delete=models.CASCADE, related_name="applications")
+    
+    cover_letter = models.TextField(blank=True)
+    status = models.CharField(max_length=10, choices=Status.choices, default=Status.NEW, db_index=True)
+    
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ("vacancy", "resume") # Один соискатель = один отклик на вакансию
+================================================================================
+
+
+================================================================================
+FILE: ads/schemas.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 2.03 KB
+Extension: .py
+Language: python
+Location: ads/schemas.py
+Relative Path: ads
+Created: 2026-02-01 13:22:18 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 12:49:47 (Asia/Tbilisi / GMT+04:00)
+MD5: ec30917282b39bb5bbcd3a20bcb01f40
+SHA256: 8c41449b5c0a169c584001601457465b92d72b50600485a50e7b93a17fa392fd
+Encoding: UTF-8
+
+FILE CONTENT:
+----------------------------------------
+from typing import Any, Dict, List, Optional
+from ninja import ModelSchema, Schema
+from .models import Category, Company, Vacancy, Resume, Application
+
+class CategoryOut(ModelSchema):
+    class Meta:
+        model = Category
+        fields = ["id", "name", "slug", "icon"]
+
+class UserOut(Schema):
+    id: int
+    username: str
+
+class CompanyOut(ModelSchema):
+    class Meta:
+        model = Company
+        fields = ["id", "name", "description", "logo"]
+
+# --- ВАКАНСИИ ---
+class VacancyCreate(Schema):
+    category_id: int
+    title: str
+    description: str
+    salary_from: Optional[float] = None
+    salary_to: Optional[float] = None
+    currency: str = "RUB"
+    city: str
+    attributes: Dict[str, Any] = {}
+    lat: Optional[float] = None
+    lon: Optional[float] = None
+
+class VacancyOut(ModelSchema):
+    category: CategoryOut
+    company: CompanyOut
+    attributes: Dict[str, Any] = {}
+    lat: Optional[float] = None
+    lon: Optional[float] = None
+
+    class Meta:
+        model = Vacancy
+        fields = [
+            "id", "title", "description", "salary_from", "salary_to",
+            "currency", "city", "status", "created_at", "attributes",
+        ]
+
+    @staticmethod
+    def resolve_lat(obj):
+        return obj.location.y if obj.location else None
+
+    @staticmethod
+    def resolve_lon(obj):
+        return obj.location.x if obj.location else None
+
+# --- РЕЗЮМЕ ---
+class ResumeCreate(Schema):
+    category_id: int
+    title: str
+    about: str
+    expected_salary: Optional[float] = None
+    currency: str = "RUB"
+    attributes: Dict[str, Any] = {}
+
+class ResumeOut(ModelSchema):
+    category: CategoryOut
+    user: UserOut
+    attributes: Dict[str, Any] = {}
+
+    class Meta:
+        model = Resume
+        fields = [
+            "id", "title", "about", "expected_salary",
+            "currency", "status", "created_at", "attributes",
+        ]
+
+# --- ДЕРЕВО КАТЕГОРИЙ ---
+class CategoryTree(Schema):
+    id: int
+    name: str
+    slug: str
+    icon: str
+    children: List['CategoryTree'] = []
+
+CategoryTree.model_rebuild()
+================================================================================
+
+
+================================================================================
+FILE: ads/services.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 586 B
+Extension: .py
+Language: python
+Location: ads/services.py
+Relative Path: ads
+Created: 2026-02-08 12:13:26 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-08 13:55:42 (Asia/Tbilisi / GMT+04:00)
+MD5: fe14de69fa397803f822b9fcfffccab9
+SHA256: 322aee736d2044727d21304774320d727c1fc4173cd21bfa8fcc8c0ce04541bf
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+from django.db import transaction
+
+from core.services import schedule_event
+
+from .models import Ad
+
+
+def create_ad(user, data):
+    with transaction.atomic():
+        ad = Ad.objects.create(
+            seller=user,
+            **data
+        )
+
+        schedule_event(
+            topic="ads_events",
+            data={
+                "event": "created",
+                "ad_id": ad.id,
+                "title": ad.title,
+                "price": float(ad.price),
+                "city": ad.city,
+                "attributes": ad.attributes
+            }
+        )
+        return ad
+
+================================================================================
+
+
+================================================================================
+FILE: ads/views.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 27 B
+Extension: .py
+Language: python
+Location: ads/views.py
+Relative Path: ads
+Created: 2026-02-01 12:43:33 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 15:20:11 (Asia/Tbilisi / GMT+04:00)
+MD5: 71d284e199a78b71fb991b8a6feb7985
+SHA256: 4cb8709d054c4eb74c9253f797c546e170a86a1c48c54607db402950afd12f25
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+
+# Create your views here.
+
+================================================================================
+
+
+================================================================================
+BINARY/EXCLUDED FILES (not included in text content)
+================================================================================
+- chat/__pycache__/__init__.cpython-312.pyc
+- chat/__pycache__/__init__.cpython-314.pyc
+- chat/__pycache__/admin.cpython-312.pyc
+- chat/__pycache__/admin.cpython-314.pyc
+- chat/__pycache__/apps.cpython-312.pyc
+- chat/__pycache__/apps.cpython-314.pyc
+- chat/__pycache__/consumers.cpython-314.pyc
+- chat/__pycache__/models.cpython-312.pyc
+- chat/__pycache__/models.cpython-314.pyc
+- chat/__pycache__/routing.cpython-314.pyc
+
+
+================================================================================
+BINARY/EXCLUDED FILES (not included in text content)
+================================================================================
+- chat/migrations/__pycache__/__init__.cpython-312.pyc
+- chat/migrations/__pycache__/__init__.cpython-314.pyc
+- chat/migrations/__pycache__/0001_initial.cpython-312.pyc
+- chat/migrations/__pycache__/0001_initial.cpython-314.pyc
+
+
+================================================================================
+FILE: chat/migrations/__init__.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 0 B
+Extension: .py
+Language: python
+Location: chat/migrations/__init__.py
+Relative Path: chat/migrations
+Created: 2026-02-01 12:43:37 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 12:43:37 (Asia/Tbilisi / GMT+04:00)
+MD5: d41d8cd98f00b204e9800998ecf8427e
+SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+FILE: chat/migrations/0001_initial.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 1.23 KB
+Extension: .py
+Language: python
+Location: chat/migrations/0001_initial.py
+Relative Path: chat/migrations
+Created: 2026-02-08 12:37:34 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-08 12:37:34 (Asia/Tbilisi / GMT+04:00)
+MD5: b3f350108bd4befd3058459e991f71c1
+SHA256: 9704ec8d86ed3d830e86168ceed41f2fedd838f374a988c0862d39d6eb8f27fa
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+# Generated by Django 6.0.1 on 2026-02-08 12:37
+
+import django.db.models.deletion
+from django.db import migrations, models
+
+
+class Migration(migrations.Migration):
+
+    initial = True
+
+    dependencies = [
+        ('ads', '0001_initial'),
+    ]
+
+    operations = [
+        migrations.CreateModel(
+            name='Message',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('text', models.TextField()),
+                ('is_read', models.BooleanField(default=False)),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+            ],
+            options={
+                'ordering': ['created_at'],
+            },
+        ),
+        migrations.CreateModel(
+            name='Conversation',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+                ('updated_at', models.DateTimeField(auto_now=True)),
+                ('ad', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='ads.ad')),
+            ],
+        ),
+    ]
+
+================================================================================
+
+
+================================================================================
+FILE: chat/migrations/0002_initial.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 1.04 KB
+Extension: .py
+Language: python
+Location: chat/migrations/0002_initial.py
+Relative Path: chat/migrations
+Created: 2026-02-08 12:37:34 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-08 12:37:34 (Asia/Tbilisi / GMT+04:00)
+MD5: fc34dfb1266ea506a0318f4409f387c6
+SHA256: c5061d892aa52159a5a27efe9490ab530c173b3a1e582b5067ab4d4774d9ca5b
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+# Generated by Django 6.0.1 on 2026-02-08 12:37
+
+import django.db.models.deletion
+from django.conf import settings
+from django.db import migrations, models
+
+
+class Migration(migrations.Migration):
+
+    initial = True
+
+    dependencies = [
+        ('chat', '0001_initial'),
+        migrations.swappable_dependency(settings.AUTH_USER_MODEL),
+    ]
+
+    operations = [
+        migrations.AddField(
+            model_name='conversation',
+            name='participants',
+            field=models.ManyToManyField(related_name='conversations', to=settings.AUTH_USER_MODEL),
+        ),
+        migrations.AddField(
+            model_name='message',
+            name='conversation',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='messages', to='chat.conversation'),
+        ),
+        migrations.AddField(
+            model_name='message',
+            name='sender',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='sent_messages', to=settings.AUTH_USER_MODEL),
+        ),
+    ]
+
+================================================================================
+
+
+================================================================================
+FILE: chat/migrations/0003_remove_conversation_ad_conversation_application.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 665 B
+Extension: .py
+Language: python
+Location: chat/migrations/0003_remove_conversation_ad_conversation_application.py
+Relative Path: chat/migrations
+Created: 2026-07-23 12:45:12 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 12:45:12 (Asia/Tbilisi / GMT+04:00)
+MD5: 3c614c85d95d6bfd18d485b4f326bdee
+SHA256: 15e141ddc5157a174f6687ed6d5aa74a5d4682bb6dbc72158ad387b66ac6367c
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+# Generated by Django 6.0.1 on 2026-07-23 12:45
+
+import django.db.models.deletion
+from django.db import migrations, models
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        ('ads', '0003_application_company_resume_vacancy_and_more'),
+        ('chat', '0002_initial'),
+    ]
+
+    operations = [
+        migrations.RemoveField(
+            model_name='conversation',
+            name='ad',
+        ),
+        migrations.AddField(
+            model_name='conversation',
+            name='application',
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='ads.application'),
+        ),
+    ]
+
+================================================================================
+
+
+================================================================================
+FILE: chat/tests/__init__.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 0 B
+Extension: .py
+Language: python
+Location: chat/tests/__init__.py
+Relative Path: chat/tests
+Created: 2026-07-23 13:51:47 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 13:51:47 (Asia/Tbilisi / GMT+04:00)
+MD5: d41d8cd98f00b204e9800998ecf8427e
+SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+FILE: chat/tests/test_websockets.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 1.36 KB
+Extension: .py
+Language: python
+Location: chat/tests/test_websockets.py
+Relative Path: chat/tests
+Created: 2026-02-01 12:43:37 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 13:52:20 (Asia/Tbilisi / GMT+04:00)
+MD5: 441376f23ece6b6ec7110cc704cde5ce
+SHA256: 39931d830c550aab4cce1183a5bc4bfb40d90b1785fc90e5977d81f089590a84
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+
+import pytest
+from channels.testing import WebsocketCommunicator
+from django.contrib.auth import get_user_model
+from ninja_jwt.tokens import RefreshToken
+
+from core.asgi import application
+from chat.models import Conversation
+
+User = get_user_model()
+
+@pytest.mark.asyncio
+@pytest.mark.django_db(transaction=True)
+async def test_chat_consumer_with_jwt():
+    user = await User.objects.acreate_user(username="chat_user", password="pwd")
+    refresh = RefreshToken.for_user(user)
+    token = str(refresh.access_token)
+
+    conv = await Conversation.objects.acreate()
+    await conv.participants.aadd(user)
+
+    communicator = WebsocketCommunicator(
+        application,
+        f"/ws/chat/{conv.id}/?token={token}"
+    )
+    connected, subprotocol = await communicator.connect()
+    
+    assert connected is True
+
+    await communicator.send_json_to({
+        "message": "Hello from pytest!",
+        "sender_id": user.id
+    })
+    
+    response = await communicator.receive_json_from()
+    
+    assert response["message"] == "Hello from pytest!"
+    assert response["sender_id"] == user.id
+    assert "timestamp" in response
+
+    await communicator.disconnect()
+
+@pytest.mark.asyncio
+async def test_chat_consumer_unauthorized():
+    communicator = WebsocketCommunicator(application, "/ws/chat/1/")
+    connected, subprotocol = await communicator.connect()
+    
+    assert connected is False
+================================================================================
+
+
+================================================================================
+FILE: chat/__init__.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 0 B
+Extension: .py
+Language: python
+Location: chat/__init__.py
+Relative Path: chat
+Created: 2026-02-01 12:43:37 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 12:43:37 (Asia/Tbilisi / GMT+04:00)
+MD5: d41d8cd98f00b204e9800998ecf8427e
+SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+FILE: chat/admin.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 30 B
+Extension: .py
+Language: python
+Location: chat/admin.py
+Relative Path: chat
+Created: 2026-02-01 12:43:37 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 15:20:11 (Asia/Tbilisi / GMT+04:00)
+MD5: 77ce68073ee4433f0469d361f3cfe875
+SHA256: 463622c28efe67688db3d25c421011820d5a83cdebe43b9a994675d65fdfe475
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+
+# Register your models here.
+
+================================================================================
+
+
+================================================================================
+FILE: chat/apps.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 83 B
+Extension: .py
+Language: python
+Location: chat/apps.py
+Relative Path: chat
+Created: 2026-02-01 12:43:37 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 15:20:01 (Asia/Tbilisi / GMT+04:00)
+MD5: 82697b7176b12828b75d1212639f7f2f
+SHA256: 04bc11ec031c5eed3b6b238f770137b66ce7b7c665a1105b418c903574045e8b
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+from django.apps import AppConfig
+
+
+class ChatConfig(AppConfig):
+    name = "chat"
+
+================================================================================
+
+
+================================================================================
+FILE: chat/consumers.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 1.96 KB
+Extension: .py
+Language: python
+Location: chat/consumers.py
+Relative Path: chat
+Created: 2026-02-01 14:43:15 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 13:02:30 (Asia/Tbilisi / GMT+04:00)
+MD5: bb55e1c18147af7a34cceb92e8fa6bdc
+SHA256: d8cd6c5ac4e45b30c3151f0e8eab5aba98a2ecc04b6b2e3c9d0e509cc86ffc8b
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+import json
+
+from channels.db import database_sync_to_async
+from channels.generic.websocket import AsyncWebsocketConsumer
+from django.contrib.auth import get_user_model
+
+from .models import Conversation, Message
+
+User = get_user_model()
+
+
+class ChatConsumer(AsyncWebsocketConsumer):
+    async def connect(self) -> None:
+        if self.scope["user"].is_anonymous:
+            await self.close()
+            return
+
+        self.conversation_id = self.scope["url_route"]["kwargs"]["conversation_id"]
+        self.room_group_name = f"chat_{self.conversation_id}"
+
+        await self.channel_layer.group_add(self.room_group_name, self.channel_name)
+
+        await self.accept()
+
+    async def disconnect(self, close_code: int) -> None:
+        await self.channel_layer.group_discard(self.room_group_name, self.channel_name)
+
+    async def receive(self, text_data: str) -> None:
+        data = json.loads(text_data)
+        message_text = data["message"]
+        sender_id = data.get("sender_id")
+
+        new_message = await self.save_message(sender_id, message_text)
+
+        await self.channel_layer.group_send(
+            self.room_group_name,
+            {
+                "type": "chat_message",
+                "message": new_message.text,
+                "sender_id": new_message.sender.id,
+                "timestamp": str(new_message.created_at),
+            },
+        )
+
+    async def chat_message(self, event):
+        await self.send(
+            text_data=json.dumps(
+                {
+                    "message": event["message"],
+                    "sender_id": event["sender_id"],
+                    "timestamp": event["timestamp"],
+                }
+            )
+        )
+
+    @database_sync_to_async
+    def save_message(self, sender_id, text):
+        conversation = Conversation.objects.get(id=self.conversation_id)
+        sender = User.objects.get(id=sender_id)
+        return Message.objects.create(
+            conversation=conversation, sender=sender, text=text
+        )
+
+================================================================================
+
+
+================================================================================
+FILE: chat/models.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 1.1 KB
+Extension: .py
+Language: python
+Location: chat/models.py
+Relative Path: chat
+Created: 2026-02-01 12:43:37 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 12:44:46 (Asia/Tbilisi / GMT+04:00)
+MD5: ceb18d80a14f7fcc5723271f9f4fb2b7
+SHA256: c4a2c422da2c3e9ba3c0aefc08f86b114df26f68d082fdfb7d06203cce8f8791
+Encoding: UTF-8
+
+FILE CONTENT:
+----------------------------------------
+from django.conf import settings
+from django.db import models
+
+
+class Conversation(models.Model):
+    participants = models.ManyToManyField(
+        settings.AUTH_USER_MODEL, related_name="conversations"
+    )
+    application = models.ForeignKey(
+        "ads.Application", on_delete=models.SET_NULL, null=True, blank=True
+    )  # Чат по поводу конкретного отклика
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self) -> str:
+        return f"Conversation {self.id}"
+
+
+class Message(models.Model):
+    conversation = models.ForeignKey(
+        Conversation, on_delete=models.CASCADE, related_name="messages"
+    )
+    sender = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="sent_messages"
+    )
+    text = models.TextField()
+    is_read = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["created_at"]
+
+    def __str__(self) -> str:
+        return f"Message {self.id} from {self.sender}"
+================================================================================
+
+
+================================================================================
+FILE: chat/routing.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 172 B
+Extension: .py
+Language: python
+Location: chat/routing.py
+Relative Path: chat
+Created: 2026-02-01 14:45:05 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 15:20:11 (Asia/Tbilisi / GMT+04:00)
+MD5: c8684d4c1e322108fefe4e5ca8fbc1bd
+SHA256: 92c1942deff70346dd93dd0785bc44e6d64d394ce5a601d8af8e6015d3c4e576
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+from django.urls import re_path
+
+from . import consumers
+
+websocket_urlpatterns = [
+    re_path(r"ws/chat/(?P<conversation_id>\d+)/$", consumers.ChatConsumer.as_asgi()),
+]
+
+================================================================================
+
+
+================================================================================
+FILE: chat/views.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 27 B
+Extension: .py
+Language: python
+Location: chat/views.py
+Relative Path: chat
+Created: 2026-02-01 12:43:37 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 15:20:11 (Asia/Tbilisi / GMT+04:00)
+MD5: 71d284e199a78b71fb991b8a6feb7985
+SHA256: 4cb8709d054c4eb74c9253f797c546e170a86a1c48c54607db402950afd12f25
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+
+# Create your views here.
+
+================================================================================
+
+
+================================================================================
+BINARY/EXCLUDED FILES (not included in text content)
+================================================================================
+- core/__pycache__/__init__.cpython-312.pyc
+- core/__pycache__/__init__.cpython-314.pyc
+- core/__pycache__/api.cpython-312.pyc
+- core/__pycache__/api.cpython-314.pyc
+- core/__pycache__/apps.cpython-312.pyc
+- core/__pycache__/asgi.cpython-314.pyc
+- core/__pycache__/celery.cpython-312.pyc
+- core/__pycache__/event_bus.cpython-312.pyc
+- core/__pycache__/settings.cpython-312.pyc
+- core/__pycache__/settings.cpython-314.pyc
+- core/__pycache__/urls.cpython-312.pyc
+- core/__pycache__/urls.cpython-314.pyc
+
+
+================================================================================
+FILE: core/docker/clickhouse/init.sql
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 925 B
+Extension: .sql
+Language: sql
+Location: core/docker/clickhouse/init.sql
+Relative Path: core/docker/clickhouse
+Created: 2026-07-23 14:02:10 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 14:02:34 (Asia/Tbilisi / GMT+04:00)
+MD5: 326b40e1078833a2209e839514139df0
+SHA256: fbf39cd90ba0c809aa60845dc8e5f8182699ffe0558fd6df1acb3243e340007b
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+CREATE DATABASE IF NOT EXISTS analytics;
+
+CREATE TABLE IF NOT EXISTS analytics.kafka_vacancies_queue (
+    event String,
+    data String 
+) ENGINE = Kafka
+SETTINGS kafka_broker_list = 'redpanda:9092',
+        kafka_topic_list = 'vacancies_events',
+        kafka_group_name = 'clickhouse_dwh_consumer',
+        kafka_format = 'JSONEachRow';
+
+CREATE TABLE IF NOT EXISTS analytics.vacancies_log (
+    event_time DateTime DEFAULT now(),
+    event_type String,
+    vacancy_id UInt64,
+    title String,
+    salary_from Float64
+) ENGINE = MergeTree()
+ORDER BY (event_time, vacancy_id);
+
+CREATE MATERIALIZED VIEW IF NOT EXISTS analytics.vacancies_mv TO analytics.vacancies_log AS
+SELECT
+    now() AS event_time,
+    event AS event_type,
+    JSONExtractUInt(data, 'vacancy_id') AS vacancy_id,
+    JSONExtractString(data, 'title') AS title,
+    JSONExtractFloat(data, 'salary_from') AS salary_from
+FROM analytics.kafka_vacancies_queue;
+================================================================================
+
+
+================================================================================
+FILE: core/docker/prometheus/prometheus.yml
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 184 B
+Extension: .yml
+Language: yaml
+Location: core/docker/prometheus/prometheus.yml
+Relative Path: core/docker/prometheus
+Created: 2026-07-23 14:01:32 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-24 11:00:09 (Asia/Tbilisi / GMT+04:00)
+MD5: b9cd7f7e3297d35415537ee46acbe3f4
+SHA256: ccf10d54f7585758acac3b033584d94aca21b81856a3273f9ddbfedf8f222f26
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+global:
+  scrape_interval: 10s
+  evaluation_interval: 10s
+
+scrape_configs:
+  - job_name: 'django_backend'
+    metrics_path: '/metrics'
+    static_configs:
+      - targets: ['web:8000']
+================================================================================
+
+
+================================================================================
+FILE: core/management/commands/run_outbox_relay.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 2.68 KB
+Extension: .py
+Language: python
+Location: core/management/commands/run_outbox_relay.py
+Relative Path: core/management/commands
+Created: 2026-02-08 12:16:35 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 13:28:57 (Asia/Tbilisi / GMT+04:00)
+MD5: b8fd34eef9f880695d5c35ed13ce8b45
+SHA256: 5f293b1e35364d280916e1ad488d693b18a6f275b53324fe253c575253e6e023
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+import asyncio
+import logging
+
+from decouple import config
+from django.core.management.base import BaseCommand
+from django.db import transaction
+from faststream.kafka import KafkaBroker
+
+from core.models import OutboxEvent
+
+BATCH_SIZE = 100
+POLL_INTERVAL = 0.5
+BROKER_URL = config("BROKER_URL")
+
+logger = logging.getLogger(__name__)
+
+class Command(BaseCommand):
+    help = "Reads events from Outbox table and pushes them to redpanda"
+
+    def handle(self, *args, **options):
+        asyncio.run(self.run_relay())
+
+    async def run_relay(self):
+        logger.info("Starting Outbox Relay...")
+
+        broker = KafkaBroker(BROKER_URL)
+        
+        try:
+            await broker.connect()
+        except Exception as e:
+            logger.error(f"Failed to initially connect to broker: {e}")
+            return
+
+        try:
+            while True:
+                try:
+                    events_to_process = await self.fetch_events()
+
+                    if not events_to_process:
+                        await asyncio.sleep(POLL_INTERVAL)
+                        continue
+
+                    logger.info(f"Found {len(events_to_process)} events. Processing...")
+
+                    successful_ids = []
+                    for event in events_to_process:
+                        try:
+                            await broker.publish(
+                                event.payload,
+                                topic=event.topic
+                            )
+                            successful_ids.append(event.id)
+                        except Exception as e:
+                            logger.error(f"Failed to publish event {event.id}: {e}")
+                            event.error_log = str(e)
+                            await event.asave()
+
+                    if successful_ids:
+                        await self.cleanup_events(successful_ids)
+                        logger.info(f"Successfully processed {len(successful_ids)} events")
+                        
+                except Exception as e:
+                    logger.error(f"Unexpected error in relay loop: {e}")
+                    await asyncio.sleep(5)  
+
+        except KeyboardInterrupt:
+            logger.info("Stopping relay...")
+        finally:
+            await broker.disconnect()
+
+    @transaction.atomic
+    def fetch_events_sync(self):
+        events = list(
+            OutboxEvent.objects.filter(processed=False)
+            .select_for_update(skip_locked=True)
+            .order_by('created_at')[:BATCH_SIZE]
+        )
+        return events
+
+    async def fetch_events(self):
+        return await asyncio.to_thread(self.fetch_events_sync)
+
+    async def cleanup_events(self, ids):
+        await OutboxEvent.objects.filter(id__in=ids).adelete()
+================================================================================
+
+
+================================================================================
+FILE: core/migrations/__init__.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 0 B
+Extension: .py
+Language: python
+Location: core/migrations/__init__.py
+Relative Path: core/migrations
+Created: 2026-02-08 12:57:17 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-08 12:57:17 (Asia/Tbilisi / GMT+04:00)
+MD5: d41d8cd98f00b204e9800998ecf8427e
+SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+FILE: core/migrations/0001_initial.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 928 B
+Extension: .py
+Language: python
+Location: core/migrations/0001_initial.py
+Relative Path: core/migrations
+Created: 2026-02-08 12:57:17 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-08 12:57:17 (Asia/Tbilisi / GMT+04:00)
+MD5: 1a28fddff90ab56ac8745feca3cbcce1
+SHA256: 7078bc679e53a9dff991375888b10bdc30188b8c15938f0744497cbb99fd9e6b
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+# Generated by Django 6.0.1 on 2026-02-08 12:57
+
+from django.db import migrations, models
+
+
+class Migration(migrations.Migration):
+
+    initial = True
+
+    dependencies = [
+    ]
+
+    operations = [
+        migrations.CreateModel(
+            name='OutboxEvent',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('topic', models.CharField(max_length=255)),
+                ('payload', models.JSONField()),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+                ('processed', models.BooleanField(default=False)),
+                ('error_log', models.TextField(blank=True, null=True)),
+            ],
+            options={
+                'indexes': [models.Index(condition=models.Q(('processed', False)), fields=['created_at'], name='outbox_created_idx')],
+            },
+        ),
+    ]
+
+================================================================================
+
+
+================================================================================
+FILE: core/tests/__init__.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 0 B
+Extension: .py
+Language: python
+Location: core/tests/__init__.py
+Relative Path: core/tests
+Created: 2026-07-23 13:50:21 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 13:50:21 (Asia/Tbilisi / GMT+04:00)
+MD5: d41d8cd98f00b204e9800998ecf8427e
+SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+FILE: core/tests/test_search.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 1.08 KB
+Extension: .py
+Language: python
+Location: core/tests/test_search.py
+Relative Path: core/tests
+Created: 2026-07-23 13:50:32 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 13:51:10 (Asia/Tbilisi / GMT+04:00)
+MD5: 3eebaca68244836c57af172d504c5e56
+SHA256: 65fc61261e8b5fe93fee2c101b2139a044d3d27db68abaf2606b445dacbf1170
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+import pytest
+from unittest.mock import AsyncMock, patch
+from core.search import search_vacancies
+
+@pytest.mark.asyncio
+@patch("core.search.client")
+async def test_search_vacancies_text_query(mock_client):
+    mock_client.search = AsyncMock(return_value={
+        "hits": {"hits": [{"_source": {"vacancy_id": 99}}]}
+    })
+    
+    result = await search_vacancies(query="Python")
+    
+    assert result == [99]
+    call_kwargs = mock_client.search.call_args.kwargs
+    query_body = call_kwargs["body"]["query"]
+    assert "multi_match" in str(query_body)
+
+@pytest.mark.asyncio
+@patch("core.search.client")
+async def test_search_vacancies_geo_query(mock_client):
+    mock_client.search = AsyncMock(return_value={"hits": {"hits": []}})
+    
+    await search_vacancies(lat=41.6, lon=41.6, radius_km=15)
+    
+    call_kwargs = mock_client.search.call_args.kwargs
+    query_body = call_kwargs["body"]["query"]
+    sort_body = call_kwargs["body"]["sort"]
+    
+    assert "geo_distance" in str(query_body)
+    assert "_geo_distance" in sort_body[0]
+    assert sort_body[0]["_geo_distance"]["distance_type"] == "arc"
+================================================================================
+
+
+================================================================================
+FILE: core/__init__.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 65 B
+Extension: .py
+Language: python
+Location: core/__init__.py
+Relative Path: core
+Created: 2026-02-01 12:42:53 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 17:31:58 (Asia/Tbilisi / GMT+04:00)
+MD5: db8b5160792d64000b4e4e13e013894a
+SHA256: 8974a9c493587f508e73f358876ade4f3ab0369012b29ffb14280dbe30f721ce
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+from .celery import app as celery_app
+
+__all__ = ("celery_app",)
+
+================================================================================
+
+
+================================================================================
+FILE: core/api.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 251 B
+Extension: .py
+Language: python
+Location: core/api.py
+Relative Path: core
+Created: 2026-02-01 13:29:22 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 12:54:04 (Asia/Tbilisi / GMT+04:00)
+MD5: 6c6fff11855041f0e3de563620717955
+SHA256: b1be811298685691f122c6b5106730b4c1cd363364708621177689a975acf326
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+from ninja_extra import NinjaExtraAPI
+from ninja_jwt.controller import NinjaJWTDefaultController
+
+api = NinjaExtraAPI()
+
+api.register_controllers(NinjaJWTDefaultController)
+
+from ads.api import router as ads_router
+
+api.add_router("/jobs", ads_router)
+================================================================================
+
+
+================================================================================
+FILE: core/apps.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 140 B
+Extension: .py
+Language: python
+Location: core/apps.py
+Relative Path: core
+Created: 2026-02-08 12:57:02 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-08 13:55:42 (Asia/Tbilisi / GMT+04:00)
+MD5: f1fd81efee676c27d905c04186e6c885
+SHA256: 101895583594dbdb07c3a4464d8b67f539906adf1cc7e345a3237843a0e895c2
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+from django.apps import AppConfig
+
+
+class CoreConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'core'
+
+================================================================================
+
+
+================================================================================
+FILE: core/asgi.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 504 B
+Extension: .py
+Language: python
+Location: core/asgi.py
+Relative Path: core
+Created: 2026-02-01 12:42:53 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 13:01:57 (Asia/Tbilisi / GMT+04:00)
+MD5: f6abfa7e3c27fca367730a25ab04cc10
+SHA256: c552e822cd662058f637dc63098ee46c39cc5217819d09e680f2d59d7d1c06af
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+import os
+
+from django.core.asgi import get_asgi_application
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "core.settings")
+django_asgi_app = get_asgi_application()
+
+from channels.routing import ProtocolTypeRouter, URLRouter  # noqa: E402
+from core.middleware import JWTAuthMiddleware  # noqa: E402
+import chat.routing  # noqa: E402
+
+application = ProtocolTypeRouter(
+    {
+        "http": django_asgi_app,
+        "websocket": JWTAuthMiddleware(URLRouter(chat.routing.websocket_urlpatterns)),
+    }
+)
+================================================================================
+
+
+================================================================================
+FILE: core/celery.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 323 B
+Extension: .py
+Language: python
+Location: core/celery.py
+Relative Path: core
+Created: 2026-02-01 17:25:07 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 17:31:58 (Asia/Tbilisi / GMT+04:00)
+MD5: 7835ed288e75d91b80448d2c16a5a0a0
+SHA256: 98cf59c701eceb91a1fe17b4e181946a5b1a856d8da5eacbdee9116441fabb53
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+import os
+
+from celery import Celery
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "core.settings")
+
+app = Celery("core")
+
+app.config_from_object("django.conf:settings", namespace="CELERY")
+
+app.autodiscover_tasks()
+
+@app.task(bind=True, ignore_result=True)
+def debug_task(self):
+    print(f"Request: {self.request!r}")
+
+================================================================================
+
+
+================================================================================
+FILE: core/event_bus.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 260 B
+Extension: .py
+Language: python
+Location: core/event_bus.py
+Relative Path: core
+Created: 2026-02-05 14:16:37 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-08 13:55:42 (Asia/Tbilisi / GMT+04:00)
+MD5: 59260b843ab7bb11a9f9da9722a3193d
+SHA256: 7cbd00ceac02690cdc2162a99944b016d1e322af9aaec43839d6548875fd6186
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+from faststream.kafka import KafkaBroker
+
+BROKER_URL = "redpanda:9092"
+
+broker = KafkaBroker(BROKER_URL)
+
+async def publish_event(topic: str, data: dict):
+    async with broker:
+        await broker.publish(
+            data,
+            topic=topic
+        )
+
+================================================================================
+
+
+================================================================================
+FILE: core/middleware.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 1.38 KB
+Extension: .py
+Language: python
+Location: core/middleware.py
+Relative Path: core
+Created: 2026-07-23 13:00:56 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 13:01:26 (Asia/Tbilisi / GMT+04:00)
+MD5: 68c70e66b0cde04f014aa7217594ecf9
+SHA256: eeba6576c3ac0cd8cfa8f491678e19a9eefae9bc50414676e1806fa3515aceaa
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+import traceback
+from urllib.parse import parse_qs
+
+from channels.db import database_sync_to_async
+from django.contrib.auth import get_user_model
+from django.contrib.auth.models import AnonymousUser
+from ninja_jwt.authentication import JWTAuth
+from ninja_jwt.exceptions import TokenError
+
+User = get_user_model()
+
+@database_sync_to_async
+def get_user_from_token(token):
+    try:
+        jwt_authenticator = JWTAuth()
+        validated_token = jwt_authenticator.get_validated_token(token)
+        user = jwt_authenticator.get_user(validated_token)
+        return user
+    except TokenError:
+        return AnonymousUser()
+    except Exception as e:
+        print(f"WebSocket Auth Error: {e}")
+        traceback.print_exc()
+        return AnonymousUser()
+
+
+class JWTAuthMiddleware:
+    """
+    Custom middleware that takes a token from the query string and authenticates via JWT.
+    Example connection: ws://localhost:8000/ws/chat/1/?token=<jwt_token>
+    """
+
+    def __init__(self, app):
+        self.app = app
+
+    async def __call__(self, scope, receive, send):
+        query_string = scope.get("query_string", b"").decode()
+        query_params = parse_qs(query_string)
+
+        token = query_params.get("token", [None])[0]
+
+        if token:
+            scope["user"] = await get_user_from_token(token)
+        else:
+            scope["user"] = AnonymousUser()
+
+        return await self.app(scope, receive, send)
+================================================================================
+
+
+================================================================================
+FILE: core/models.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 466 B
+Extension: .py
+Language: python
+Location: core/models.py
+Relative Path: core
+Created: 2026-02-08 12:08:56 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-08 13:55:42 (Asia/Tbilisi / GMT+04:00)
+MD5: 8e0a057ea74ccce1a7229c4a4ec6e264
+SHA256: a7bcfa250086c89ef3e00ea4d005817a6b20e2290e32b2a8eacd08316548a4ef
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+from django.db import models
+
+
+class OutboxEvent(models.Model):
+    topic = models.CharField(max_length=255)
+    payload = models.JSONField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    processed = models.BooleanField(default=False)
+
+    error_log = models.TextField(blank=True, null=True)
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['created_at'], name='outbox_created_idx', condition=models.Q(processed=False))
+        ]
+
+================================================================================
+
+
+================================================================================
+FILE: core/search.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 2.14 KB
+Extension: .py
+Language: python
+Location: core/search.py
+Relative Path: core
+Created: 2026-02-08 13:33:02 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 13:56:43 (Asia/Tbilisi / GMT+04:00)
+MD5: f082fb2d4ce430399cc7d22251a3d772
+SHA256: b39cf89bae5d0bf865ac164638972de8e95dcb564e10ff87d9d66faba241b00b
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+from decouple import config
+from opensearchpy import AsyncOpenSearch
+
+OPENSEARCH_URL = config("OPENSEARCH_URL", default="http://localhost:9200")
+
+client = AsyncOpenSearch(
+    hosts=[OPENSEARCH_URL],
+    use_ssl=False,
+    verify_certs=False
+)
+
+async def search_vacancies(
+    query: str = None, 
+    lat: float = None, 
+    lon: float = None,
+    radius_km: int = 10,
+    limit: int = 20, 
+    offset: int = 0,
+):
+    """
+    Searches for vacancies in OpenSearch.
+    Returns a list of IDs of found vacancies.
+    """
+    search_query = {
+        "bool": {
+            "must": [],
+            "filter": []
+        }
+    }
+    
+    if query:
+        search_query["bool"]["must"].append({
+            "multi_match": {
+                "query": query,
+                "fields": ["title^3", "description"],
+                "fuzziness": "AUTO"
+            }
+        })
+    else:
+        if not lat: 
+            search_query = {"match_all": {}}
+
+    if lat is not None and lon is not None:
+        search_query["bool"]["filter"].append({
+            "geo_distance": {
+                "distance": f"{radius_km}km",
+                "location": {
+                    "lat": lat,
+                    "lon": lon
+                }
+            }
+        })  
+
+    sort_params = []
+    
+    if query:
+        sort_params.append("_score")
+
+    if lat and lon:
+        sort_params.append({
+            "_geo_distance": {
+                "location": {"lat": lat, "lon": lon},
+                "order": "asc",
+                "unit": "km",
+                "mode": "min",
+                "distance_type": "arc"
+            }
+        })
+    
+    sort_params.append({"vacancy_id": "desc"})
+
+    try:
+        response = await client.search(
+            index="vacancies",
+            body={
+                "query": search_query,
+                "from": offset,
+                "size": limit,
+                "sort": sort_params  
+            },
+            _source=["vacancy_id"]
+        )
+
+        hits = response["hits"]["hits"]
+        vacancy_ids = [hit["_source"]["vacancy_id"] for hit in hits]
+        return vacancy_ids
+
+    except Exception as e:
+        print(f"OpenSearch error: {e}")
+        return []
+================================================================================
+
+
+================================================================================
+FILE: core/services.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 136 B
+Extension: .py
+Language: python
+Location: core/services.py
+Relative Path: core
+Created: 2026-02-08 12:09:15 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-08 13:55:42 (Asia/Tbilisi / GMT+04:00)
+MD5: 71c2f657c210ea1e16e248cbbfc34b2e
+SHA256: 9130b96586e4c552a0611c17e1a2e6e75a1028ec859402b7dbba4c3bd5464134
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+from .models import OutboxEvent
+
+
+def schedule_event(topic: str, data: dict):
+    OutboxEvent.objects.create(topic=topic, payload=data)
+
+================================================================================
+
+
+================================================================================
+FILE: core/settings.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 4.29 KB
+Extension: .py
+Language: python
+Location: core/settings.py
+Relative Path: core
+Created: 2026-02-01 12:42:53 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-24 10:50:29 (Asia/Tbilisi / GMT+04:00)
+MD5: 72d5bd8a3b5690109c741532fe17100d
+SHA256: 457c7659b344661df2f07e842e21f11d4863cda9b0ebb6a5fe55faeb1d7073ad
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+from datetime import timedelta
+from pathlib import Path
+
+from decouple import config
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+SECRET_KEY = config("SECRET_KEY")
+
+DEBUG = True
+
+ALLOWED_HOSTS: list[str] = ["*"]
+
+
+INSTALLED_APPS = [
+    "daphne",
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "django.contrib.postgres",
+    "django.contrib.gis",
+    "django_prometheus",
+    "treebeard",
+    "ninja",
+    "core",
+    "users",
+    "ads",
+    "chat",
+    "ninja_extra",
+    "ninja_jwt",
+]
+
+AUTH_USER_MODEL = "users.User"
+
+MIDDLEWARE = [
+    "django_prometheus.middleware.PrometheusBeforeMiddleware",
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django_prometheus.middleware.PrometheusAfterMiddleware"
+]
+
+ROOT_URLCONF = "core.urls"
+
+TEMPLATES = [
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+            ],
+        },
+    },
+]
+
+WSGI_APPLICATION = "core.wsgi.application"
+
+ASGI_APPLICATION = "core.asgi.application"
+
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.contrib.gis.db.backends.postgis",
+        "NAME": config("DB_NAME"),
+        "USER": config("DB_USER"),
+        "PASSWORD": config("DB_PASSWORD"),
+        "HOST": config("DB_HOST"),
+        "PORT": config("DB_PORT"),
+    }
+}
+
+
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
+    },
+]
+
+
+LANGUAGE_CODE = "en-us"
+
+TIME_ZONE = "UTC"
+
+USE_I18N = True
+
+USE_TZ = True
+
+
+STATIC_URL = "static/"
+
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [config("REDIS_URL", default="redis://redis:6379/0")],
+        },
+    },
+}
+
+
+CELERY_BROKER_URL = config("REDIS_URL", default="redis://redis:6379/0")
+CELERY_RESULT_BACKEND = config("REDIS_URL", default="redis://redis:6379/0")
+CELERY_TIMEZONE = "UTC"
+
+
+NINJA_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+}
+
+
+
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+    },
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    },
+}
+
+AWS_ACCESS_KEY_ID = config("MINIO_ROOT_USER")
+AWS_SECRET_ACCESS_KEY = config("MINIO_ROOT_PASSWORD")
+AWS_STORAGE_BUCKET_NAME = config("MINIO_BUCKET_NAME")
+AWS_S3_ENDPOINT_URL = config("MINIO_ENDPOINT_URL", default="http://minio:9000")
+AWS_S3_REGION_NAME = "us-east-1"
+AWS_S3_SIGNATURE_VERSION = "s3v4"
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = "public-read"
+
+AWS_S3_CUSTOM_DOMAIN = f"127.0.0.1:9000/{AWS_STORAGE_BUCKET_NAME}"
+
+
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "verbose": {
+            "format": "{levelname} {asctime} {module} {message}",
+            "style": "{",
+        },
+    },
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "formatter": "verbose",
+        },
+    },
+    "root": {
+        "handlers": ["console"],
+        "level": "INFO",
+    },
+    "loggers": {
+        "django": {
+            "handlers": ["console"],
+            "level": config("DJANGO_LOG_LEVEL", default="INFO"),
+            "propagate": False,
+        },
+    },
+}
+================================================================================
+
+
+================================================================================
+FILE: core/urls.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 226 B
+Extension: .py
+Language: python
+Location: core/urls.py
+Relative Path: core
+Created: 2026-02-01 12:42:53 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 14:00:38 (Asia/Tbilisi / GMT+04:00)
+MD5: 1381c396ae5dc569ec714686a127de9d
+SHA256: a210c11466509f54c0c040067efdf79cb397f87a75968ecbc47cca994d63ce25
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+from django.contrib import admin
+from django.urls import path, include
+
+from .api import api
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("api/", api.urls),
+    path("", include("django_prometheus.urls")),
+]
+
+================================================================================
+
+
+================================================================================
+FILE: core/wsgi.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 385 B
+Extension: .py
+Language: python
+Location: core/wsgi.py
+Relative Path: core
+Created: 2026-02-01 12:42:53 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 15:20:01 (Asia/Tbilisi / GMT+04:00)
+MD5: 2c33b467319d82d84ccd8f5edf8e0f0a
+SHA256: 968371a1a29d9ee819c790577149058225f67926e78d6d88b03fbea93f124c40
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+"""
+WSGI config for core project.
+
+It exposes the WSGI callable as a module-level variable named ``application``.
+
+For more information on this file, see
+https://docs.djangoproject.com/en/6.0/howto/deployment/wsgi/
+"""
+
+import os
+
+from django.core.wsgi import get_wsgi_application
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "core.settings")
+
+application = get_wsgi_application()
+
+================================================================================
+
+
+================================================================================
+FILE: docker/prometheus/prometheus.yml
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 0 B
+Extension: .yml
+Language: yaml
+Location: docker/prometheus/prometheus.yml
+Relative Path: docker/prometheus
+Created: 2026-07-24 10:59:54 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-24 10:59:54 (Asia/Tbilisi / GMT+04:00)
+MD5: d41d8cd98f00b204e9800998ecf8427e
+SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+FILE: docker/promtail/config.yml
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 417 B
+Extension: .yml
+Language: yaml
+Location: docker/promtail/config.yml
+Relative Path: docker/promtail
+Created: 2026-07-24 10:48:56 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-24 10:49:00 (Asia/Tbilisi / GMT+04:00)
+MD5: 0a75ccaed90696dc1594562077f5642d
+SHA256: 4a9ece594a26b2b0f00d6be90d86df1eecb0979e009a6b0a896fef3238a9c040
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+server:
+  http_listen_port: 9080
+  grpc_listen_port: 0
+
+positions:
+  filename: /tmp/positions.yaml
+
+clients:
+  - url: http://loki:3100/loki/api/v1/push
+
+scrape_configs:
+  - job_name: docker
+    docker_sd_configs:
+      - host: unix:///var/run/docker.sock
+        refresh_interval: 5s
+    relabel_configs:
+      - source_labels: ['__meta_docker_container_name']
+        regex: '/(.*)'
+        target_label: 'container'
+================================================================================
+
+
+================================================================================
+FILE: search_service/__init__.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 0 B
+Extension: .py
+Language: python
+Location: search_service/__init__.py
+Relative Path: search_service
+Created: 2026-02-05 14:22:37 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-05 14:22:37 (Asia/Tbilisi / GMT+04:00)
+MD5: d41d8cd98f00b204e9800998ecf8427e
+SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+FILE: search_service/main.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 2.95 KB
+Extension: .py
+Language: python
+Location: search_service/main.py
+Relative Path: search_service
+Created: 2026-02-05 14:22:42 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 12:59:29 (Asia/Tbilisi / GMT+04:00)
+MD5: 9994ad37d7a4af08507a201b4b0104ac
+SHA256: 0b440896d20d363eb6c5064320848cefea3fd1eb9ba84d943204498b777ec0db
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+import logging
+from typing import Dict, Literal, Optional
+
+from decouple import config 
+from faststream import FastStream
+from faststream.kafka import KafkaBroker
+from opensearchpy import AsyncOpenSearch
+from opensearchpy import exceptions as os_exceptions
+from pydantic import BaseModel
+
+BROKER_URL = config("BROKER_URL", default="localhost:9092")
+OPENSEARCH_URL = config("OPENSEARCH_URL", default="http://localhost:9200")
+INDEX_NAME = "vacancies"
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+class VacancyPayload(BaseModel):
+    vacancy_id: int
+    title: str
+    description: str
+    salary_from: Optional[float] = None
+    salary_to: Optional[float] = None
+    city: str
+    attributes: Dict = {}
+    location: Optional[Dict[str, float]] = None
+
+class VacancyEvent(BaseModel):
+    event: Literal["created", "updated", "deleted"]
+    data: VacancyPayload
+
+broker = KafkaBroker(BROKER_URL)
+app = FastStream(broker)
+
+os_client = AsyncOpenSearch(
+    hosts=[OPENSEARCH_URL],
+    use_ssl=False,
+    verify_certs=False
+)
+
+@app.on_startup
+async def setup_index():
+    try:
+        exists = await os_client.indices.exists(index=INDEX_NAME)
+        if not exists:
+            await os_client.indices.create(index=INDEX_NAME, body={
+                "mappings": {
+                    "properties": {
+                        "title": {"type": "text"},
+                        "description": {"type": "text"},
+                        "salary_from": {"type": "float"},
+                        "salary_to": {"type": "float"},
+                        "city": {"type": "keyword"},
+                        "vacancy_id": {"type": "long"},
+                        "location": {"type": "geo_point"}, 
+                        "attributes": {
+                            "type": "object",
+                            "dynamic": True
+                        }
+                    }
+                }
+            })
+            logger.info(f"OpenSearch index '{INDEX_NAME}' created")
+    except Exception as e:
+        logger.error(f"Failed to setup index: {e}")
+
+@broker.subscriber("vacancies_events")
+async def handle_vacancy_event(msg: VacancyEvent):
+    logger.info(f"Processing event: {msg.event} for vacancy_id: {msg.data.vacancy_id}")
+
+    try:
+        if msg.event in ("created", "updated"):
+            await os_client.index(
+                index=INDEX_NAME,
+                id=msg.data.vacancy_id,
+                body=msg.data.model_dump(),
+                refresh=True
+            )
+            logger.info(f"Indexed/Updated vacancy {msg.data.vacancy_id}")
+
+        elif msg.event == "deleted":
+            try:
+                await os_client.delete(index=INDEX_NAME, id=msg.data.vacancy_id)
+                logger.info(f"Deleted vacancy {msg.data.vacancy_id}")
+            except os_exceptions.NotFoundError:
+                logger.warning(f"Vacancy {msg.data.vacancy_id} not found for deletion")
+
+    except Exception as e:
+        logger.error(f"Error processing message: {e}")
+        raise e
+================================================================================
+
+
+================================================================================
+FILE: search_service/tests.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 1.68 KB
+Extension: .py
+Language: python
+Location: search_service/tests.py
+Relative Path: search_service
+Created: 2026-07-23 13:37:49 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 13:38:15 (Asia/Tbilisi / GMT+04:00)
+MD5: 3b3bfcece68d23be958191c702e10df3
+SHA256: 5cafdc5f1e15f40a03b09a90c7fa57daddf01fe45c1200bf47002898a7c0e963
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+import pytest
+from unittest.mock import AsyncMock, patch
+
+from faststream.kafka import TestKafkaBroker
+from search_service.main import broker, app
+
+@pytest.mark.asyncio
+@patch("search_service.main.os_client")
+async def test_vacancy_event_handler_indexes_document(mock_os_client):
+    mock_os_client.index = AsyncMock()
+    
+    event_payload = {
+        "event": "created",
+        "data": {
+            "vacancy_id": 42,
+            "title": "Data Engineer",
+            "description": "ClickHouse, Airflow",
+            "salary_from": 4000.0,
+            "city": "Remote",
+            "attributes": {"skills": ["Python", "SQL"]},
+            "location": {"lat": 41.6, "lon": 41.6}
+        }
+    }
+
+    async with TestKafkaBroker(broker) as br:
+        await br.publish(event_payload, topic="vacancies_events")
+        
+        mock_os_client.index.assert_called_once()
+        
+        call_kwargs = mock_os_client.index.call_args.kwargs
+        assert call_kwargs["index"] == "vacancies"
+        assert call_kwargs["id"] == 42
+        assert call_kwargs["body"]["title"] == "Data Engineer"
+
+
+@pytest.mark.asyncio
+@patch("search_service.main.os_client")
+async def test_vacancy_event_handler_deletes_document(mock_os_client):
+    mock_os_client.delete = AsyncMock()
+    
+    event_payload = {
+        "event": "deleted",
+        "data": {
+            "vacancy_id": 42,
+            "title": "Data Engineer",
+            "description": "...",
+            "city": "Remote"
+        }
+    }
+
+    async with TestKafkaBroker(broker) as br:
+        await br.publish(event_payload, topic="vacancies_events")
+        
+        mock_os_client.delete.assert_called_once_with(
+            index="vacancies", 
+            id=42
+        )
+================================================================================
+
+
+================================================================================
+BINARY/EXCLUDED FILES (not included in text content)
+================================================================================
+- users/__pycache__/__init__.cpython-312.pyc
+- users/__pycache__/__init__.cpython-314.pyc
+- users/__pycache__/admin.cpython-312.pyc
+- users/__pycache__/admin.cpython-314.pyc
+- users/__pycache__/apps.cpython-312.pyc
+- users/__pycache__/apps.cpython-314.pyc
+- users/__pycache__/models.cpython-312.pyc
+- users/__pycache__/models.cpython-314.pyc
+
+
+================================================================================
+BINARY/EXCLUDED FILES (not included in text content)
+================================================================================
+- users/migrations/__pycache__/__init__.cpython-312.pyc
+- users/migrations/__pycache__/__init__.cpython-314.pyc
+- users/migrations/__pycache__/0001_initial.cpython-312.pyc
+- users/migrations/__pycache__/0001_initial.cpython-314.pyc
+
+
+================================================================================
+FILE: users/migrations/__init__.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 0 B
+Extension: .py
+Language: python
+Location: users/migrations/__init__.py
+Relative Path: users/migrations
+Created: 2026-02-01 12:43:22 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 12:43:22 (Asia/Tbilisi / GMT+04:00)
+MD5: d41d8cd98f00b204e9800998ecf8427e
+SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+FILE: users/migrations/0001_initial.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 2.99 KB
+Extension: .py
+Language: python
+Location: users/migrations/0001_initial.py
+Relative Path: users/migrations
+Created: 2026-02-08 12:37:34 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-08 12:37:34 (Asia/Tbilisi / GMT+04:00)
+MD5: 77011360ecb7b68ef5cfa5670ade2d96
+SHA256: da2f40b4ebe640af67a9740f613b3d19dd37655b00bf256fd848c91da1774d65
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+# Generated by Django 6.0.1 on 2026-02-08 12:37
+
+import django.contrib.auth.models
+import django.contrib.auth.validators
+import django.utils.timezone
+from django.db import migrations, models
+
+
+class Migration(migrations.Migration):
+
+    initial = True
+
+    dependencies = [
+        ('auth', '0012_alter_user_first_name_max_length'),
+    ]
+
+    operations = [
+        migrations.CreateModel(
+            name='User',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('password', models.CharField(max_length=128, verbose_name='password')),
+                ('last_login', models.DateTimeField(blank=True, null=True, verbose_name='last login')),
+                ('is_superuser', models.BooleanField(default=False, help_text='Designates that this user has all permissions without explicitly assigning them.', verbose_name='superuser status')),
+                ('username', models.CharField(error_messages={'unique': 'A user with that username already exists.'}, help_text='Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.', max_length=150, unique=True, validators=[django.contrib.auth.validators.UnicodeUsernameValidator()], verbose_name='username')),
+                ('first_name', models.CharField(blank=True, max_length=150, verbose_name='first name')),
+                ('last_name', models.CharField(blank=True, max_length=150, verbose_name='last name')),
+                ('email', models.EmailField(blank=True, max_length=254, verbose_name='email address')),
+                ('is_staff', models.BooleanField(default=False, help_text='Designates whether the user can log into this admin site.', verbose_name='staff status')),
+                ('is_active', models.BooleanField(default=True, help_text='Designates whether this user should be treated as active. Unselect this instead of deleting accounts.', verbose_name='active')),
+                ('date_joined', models.DateTimeField(default=django.utils.timezone.now, verbose_name='date joined')),
+                ('phone', models.CharField(blank=True, max_length=20, null=True, unique=True)),
+                ('avatar', models.ImageField(blank=True, null=True, upload_to='avatars/')),
+                ('groups', models.ManyToManyField(blank=True, help_text='The groups this user belongs to. A user will get all permissions granted to each of their groups.', related_name='user_set', related_query_name='user', to='auth.group', verbose_name='groups')),
+                ('user_permissions', models.ManyToManyField(blank=True, help_text='Specific permissions for this user.', related_name='user_set', related_query_name='user', to='auth.permission', verbose_name='user permissions')),
+            ],
+            options={
+                'verbose_name': 'user',
+                'verbose_name_plural': 'users',
+                'abstract': False,
+            },
+            managers=[
+                ('objects', django.contrib.auth.models.UserManager()),
+            ],
+        ),
+    ]
+
+================================================================================
+
+
+================================================================================
+FILE: users/__init__.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 0 B
+Extension: .py
+Language: python
+Location: users/__init__.py
+Relative Path: users
+Created: 2026-02-01 12:43:22 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 12:43:22 (Asia/Tbilisi / GMT+04:00)
+MD5: d41d8cd98f00b204e9800998ecf8427e
+SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+FILE: users/admin.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 144 B
+Extension: .py
+Language: python
+Location: users/admin.py
+Relative Path: users
+Created: 2026-02-01 12:43:22 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-09 09:45:00 (Asia/Tbilisi / GMT+04:00)
+MD5: 6a83c9567e80176344087f0308bd25ae
+SHA256: f859f22892730de29467f1e5c88e89658b480bae4d38b4d5a38b5c1f84acf287
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin
+from .models import User
+
+
+admin.site.register(User, UserAdmin)
+================================================================================
+
+
+================================================================================
+FILE: users/apps.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 85 B
+Extension: .py
+Language: python
+Location: users/apps.py
+Relative Path: users
+Created: 2026-02-01 12:43:22 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 15:20:01 (Asia/Tbilisi / GMT+04:00)
+MD5: 055f77c3f610ff56654d5bdfb5a80c39
+SHA256: ffb6d3b3c1ca9ed661d0ae1e142ed03adca63de58e3d511328df1c786fba3969
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+from django.apps import AppConfig
+
+
+class UsersConfig(AppConfig):
+    name = "users"
+
+================================================================================
+
+
+================================================================================
+FILE: users/models.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 318 B
+Extension: .py
+Language: python
+Location: users/models.py
+Relative Path: users
+Created: 2026-02-01 12:43:22 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 15:20:01 (Asia/Tbilisi / GMT+04:00)
+MD5: 2bd8f77381b5466ddaa831294cec2784
+SHA256: 2b88e13b9397de7e61602cfb460876929e9a9ba338161ed91ba6101f2ba24330
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+from django.contrib.auth.models import AbstractUser
+from django.db import models
+
+
+class User(AbstractUser):
+    phone = models.CharField(max_length=20, blank=True, null=True, unique=True)
+    avatar = models.ImageField(upload_to="avatars/", blank=True, null=True)
+
+    def __str__(self):
+        return self.username
+
+================================================================================
+
+
+================================================================================
+FILE: users/tests.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 27 B
+Extension: .py
+Language: python
+Location: users/tests.py
+Relative Path: users
+Created: 2026-02-01 12:43:22 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 15:20:11 (Asia/Tbilisi / GMT+04:00)
+MD5: f64ed067f4f9a932c6e8eef1946af600
+SHA256: 6f472df59d68aeb595d3ff89736fcca67e60ff021b5b834dec2bd8dfcd4d776f
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+
+# Create your tests here.
+
+================================================================================
+
+
+================================================================================
+FILE: users/views.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 27 B
+Extension: .py
+Language: python
+Location: users/views.py
+Relative Path: users
+Created: 2026-02-01 12:43:22 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 15:20:11 (Asia/Tbilisi / GMT+04:00)
+MD5: 71d284e199a78b71fb991b8a6feb7985
+SHA256: 4cb8709d054c4eb74c9253f797c546e170a86a1c48c54607db402950afd12f25
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+
+# Create your views here.
+
+================================================================================
+
+
+================================================================================
+FILE: docker-compose.yml
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 5.32 KB
+Extension: .yml
+Language: yaml
+Location: docker-compose.yml
+Relative Path: root
+Created: 2026-02-01 12:59:07 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 14:22:30 (Asia/Tbilisi / GMT+04:00)
+MD5: 0d7254a74f05036989dce1a8db7763ae
+SHA256: a686c01b1c151c177f756740dcd785cdee1dd91a908e078016b91ea3b03a2b7f
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+services:
+  web:
+    build: .
+    command: daphne -b 0.0.0.0 -p 8000 core.asgi:application
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+
+  worker:
+    build: .
+    command: celery -A core worker -l info
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - redis
+
+  db:
+    image: postgis/postgis:16-3.4
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  redpanda:
+    image: docker.redpanda.com/redpandadata/redpanda:latest
+    command:
+      - redpanda start
+      - --smp 1  
+      - --memory 1G 
+      - --reserve-memory 0M
+      - --overprovisioned
+      - --kafka-addr internal://0.0.0.0:9092,external://0.0.0.0:19092
+      - --advertise-kafka-addr internal://redpanda:9092,external://localhost:19092
+      - --pandaproxy-addr internal://0.0.0.0:8082,external://0.0.0.0:18082
+      - --advertise-pandaproxy-addr internal://redpanda:8082,external://localhost:18082
+      - --schema-registry-addr internal://0.0.0.0:8081,external://0.0.0.0:18081
+      - --rpc-addr 0.0.0.0:33145
+      - --advertise-rpc-addr redpanda:33145
+      - --check=false
+      - --set redpanda.developer_mode=true
+    ports:
+      - 18081:18081
+      - 18082:18082
+      - 19092:19092
+      - 9644:9644
+    volumes:
+      - redpanda_data:/var/lib/redpanda/data
+    healthcheck:
+      test: ["CMD-SHELL", "rpk cluster info"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  opensearch:
+    image: opensearchproject/opensearch:2.11.0
+    container_name: opensearch
+    environment:
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true 
+      - "OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m" 
+      - DISABLE_SECURITY_PLUGIN=true 
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    ports:
+      - 9200:9200
+      - 9600:9600
+    volumes:
+      - opensearch_data:/usr/share/opensearch/data
+
+  opensearch-dashboards:
+    image: opensearchproject/opensearch-dashboards:2.11.0
+    ports:
+      - 5601:5601
+    environment:
+      - 'OPENSEARCH_HOSTS=["http://opensearch:9200"]'
+      - DISABLE_SECURITY_DASHBOARDS_PLUGIN=true
+    depends_on:
+      - opensearch
+  
+  indexer:
+    build: .
+    command: uv run faststream run search_service.main:app
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    depends_on:
+      redpanda:
+        condition: service_healthy
+      opensearch:
+        condition: service_started
+
+  relay:
+    build: .
+    command: python manage.py run_outbox_relay
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    depends_on:
+      db:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+  
+  clickhouse:
+    image: clickhouse/clickhouse-server:24-alpine
+    ports:
+      - "8123:8123" 
+      - "9000:9000" 
+    env_file:
+      - .env
+    environment:
+      - CLICKHOUSE_USER=${CLICKHOUSE_USER}
+      - CLICKHOUSE_PASSWORD=${CLICKHOUSE_PASSWORD}
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+      - ./docker/clickhouse/init.sql:/docker-entrypoint-initdb.d/init.sql
+    depends_on:
+      redpanda:
+        condition: service_healthy
+
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./docker/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    depends_on:
+      - web
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    volumes:
+      - grafana_data:/var/lib/grafana
+    depends_on:
+      - prometheus
+      - clickhouse
+  
+  minio:
+    image: minio/minio:latest
+    command: server /data --console-address ":9001"
+    environment:
+      - MINIO_ROOT_USER=${MINIO_ROOT_USER}
+      - MINIO_ROOT_PASSWORD=${MINIO_ROOT_PASSWORD}
+    ports:
+      - "9000:9000" # API
+      - "9001:9001" # Web UI
+    volumes:
+      - minio_data:/data
+
+  minio-init:
+    image: minio/mc:latest
+    depends_on:
+      - minio
+    entrypoint: >
+      /bin/sh -c "
+      sleep 5;
+      mc alias set myminio http://minio:9000 ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD};
+      mc mb myminio/${MINIO_BUCKET_NAME} || true;
+      mc anonymous set public myminio/${MINIO_BUCKET_NAME};
+      "
+
+  # --- CENTRALIZED LOGGING ---
+  loki:
+    image: grafana/loki:latest
+    ports:
+      - "3100:3100"
+    command: -config.file=/etc/loki/local-config.yaml
+    volumes:
+      - loki_data:/loki
+
+  promtail:
+    image: grafana/promtail:latest
+    volumes:
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - ./docker/promtail/config.yml:/etc/promtail/config.yml
+    command: -config.file=/etc/promtail/config.yml
+    depends_on:
+      - loki
+
+volumes:
+  postgres_data:
+  redpanda_data:
+  opensearch_data:
+  clickhouse_data:
+  prometheus_data:
+  grafana_data:
+  minio_data:
+  loki_data:
+================================================================================
+
+
+================================================================================
+FILE: main.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 94 B
+Extension: .py
+Language: python
+Location: main.py
+Relative Path: root
+Created: 2026-02-01 12:38:54 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 12:38:54 (Asia/Tbilisi / GMT+04:00)
+MD5: c3668c7fc4dffc9fe8d285c7909df502
+SHA256: cb7ea5bddc860d28165103d1766e74a1091265f4b28a6b76068ba3e7f0bf24dc
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+def main():
+    print("Hello from listing-platform!")
+
+
+if __name__ == "__main__":
+    main()
+
+================================================================================
+
+
+================================================================================
+FILE: manage.py
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 669 B
+Extension: .py
+Language: python
+Location: manage.py
+Relative Path: root
+Created: 2026-02-01 12:42:53 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-02-01 15:30:23 (Asia/Tbilisi / GMT+04:00)
+MD5: 421ffc7493be25b99d0f090a6978e54b
+SHA256: c1df0103f2ca1bc7d581d39108cdf1d523e55f8ef3b73aceadabb162e7755004
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+#!/usr/bin/env python
+"""Django's command-line utility for administrative tasks."""
+
+import os
+import sys
+
+
+def main() -> None:
+    """Run administrative tasks."""
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "core.settings")
+    try:
+        from django.core.management import execute_from_command_line
+    except ImportError as exc:
+        raise ImportError(
+            "Couldn't import Django. Are you sure it's installed and "
+            "available on your PYTHONPATH environment variable? Did you "
+            "forget to activate a virtual environment?"
+        ) from exc
+    execute_from_command_line(sys.argv)
+
+
+if __name__ == "__main__":
+    main()
+
+================================================================================
+
+
+================================================================================
+FILE: pyproject.toml
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 1.41 KB
+Extension: .toml
+Language: text
+Location: pyproject.toml
+Relative Path: root
+Created: 2026-02-01 12:38:54 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 13:58:59 (Asia/Tbilisi / GMT+04:00)
+MD5: f049ba58a2f3361470117879711fedbc
+SHA256: 070c27dd9e05a697b97d1b8cdf038befcfc679f43e9459eef5c503dae00ad7fc
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+[project]
+name = "listing-platform"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "boto3>=1.42.44",
+    "celery>=5.6.2",
+    "channels>=4.3.2",
+    "channels-redis>=4.3.0",
+    "daphne>=4.2.1",
+    "django>=6.0.1",
+    "django-ninja>=1.5.3",
+    "django-ninja-jwt>=5.4.4",
+    "django-prometheus>=2.5.0",
+    "django-storages>=1.14.6",
+    "django-treebeard>=4.8.0",
+    "faststream[cli,kafka]>=0.6.6",
+    "opensearch-py[async]>=2.0.0",
+    "pillow>=12.1.0",
+    "psycopg[binary]>=3.3.2",
+    "python-decouple>=3.8",
+    "redis>=7.1.0",
+    "uvloop>=0.22.1",
+    "whitenoise>=6.11.0",
+]
+
+[dependency-groups]
+dev = [
+    "django-stubs[compatible-mypy]>=5.2.9",
+    "model-bakery>=1.24.0",
+    "mypy>=1.19.1",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "pytest-cov>=7.1.0",
+    "pytest-django>=4.12.0",
+    "pytest-mock>=3.15.1",
+    "ruff>=0.14.14",
+]
+
+
+[tool.ruff]
+line-length = 120
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
+    "migrations",
+]
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+plugins = ["mypy_django_plugin.main"]
+python_version = "3.12"  
+strict_optional = true
+ignore_missing_imports = true
+
+[tool.django-stubs]
+django_settings_module = "core.settings"
+
+[[tool.mypy.overrides]]
+module = "ninja.*"
+ignore_missing_imports = true
+
+================================================================================
+
+
+================================================================================
+FILE: pytest.ini
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 112 B
+Extension: .ini
+Language: text
+Location: pytest.ini
+Relative Path: root
+Created: 2026-07-23 13:35:31 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 13:35:36 (Asia/Tbilisi / GMT+04:00)
+MD5: f7f037fb027fb3568d8abccd58282eea
+SHA256: 4ef21aeadeaa6cdff2d9931d4c2014d6bba7a9a9efa9eefac735342161a832f3
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+[pytest]
+DJANGO_SETTINGS_MODULE = core.settings
+python_files = tests.py test_*.py *_tests.py
+asyncio_mode = auto
+================================================================================
+
+
+================================================================================
+FILE: README.md
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 0 B
+Extension: .md
+Language: text
+Location: README.md
+Relative Path: root
+Created: 2026-02-01 12:38:54 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-24 11:04:22 (Asia/Tbilisi / GMT+04:00)
+MD5: d41d8cd98f00b204e9800998ecf8427e
+SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+FILE: uv.lock
+================================================================================
+
+FILE INFORMATION:
+----------------------------------------
+Size: 430.25 KB
+Extension: .lock
+Language: text
+Location: uv.lock
+Relative Path: root
+Created: 2026-02-01 12:39:30 (Asia/Tbilisi / GMT+04:00)
+Modified: 2026-07-23 13:58:59 (Asia/Tbilisi / GMT+04:00)
+MD5: 5315834cd7357b007af17226915f0d10
+SHA256: c34389f19fe7903f2656a339aa77a73e4a64437ffab38f5c96447cd5f85a49bd
+Encoding: ASCII
+
+FILE CONTENT:
+----------------------------------------
 version = 1
 revision = 3
 requires-python = ">=3.12"
@@ -2531,3 +6579,13 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/ab/fb/5f5e7b40a2f4efd873fe173624795ca47eaa22e29051270c981361b45209/zope_interface-8.2-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:05a0e42d6d830f547e114de2e7cd15750dc6c0c78f8138e6c5035e51ddfff37c", size = 264390, upload-time = "2026-01-09T08:05:42.936Z" },
     { url = "https://files.pythonhosted.org/packages/f9/82/3f2bc594370bc3abd58e5f9085d263bf682a222f059ed46275cde0570810/zope_interface-8.2-cp314-cp314-win_amd64.whl", hash = "sha256:561ce42390bee90bae51cf1c012902a8033b2aaefbd0deed81e877562a116d48", size = 212585, upload-time = "2026-01-09T08:05:44.419Z" },
 ]
+
+================================================================================
+
+
+================================================================================
+BINARY/EXCLUDED FILES (not included in text content)
+================================================================================
+- Dockerfile
+- Makefile
+- repomix-output.xml
